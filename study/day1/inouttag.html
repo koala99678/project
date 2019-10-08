@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>인풋테그 예제</title>
+</head>
+<body>
+    <form action="">
+        <!--type은 "와 '' 둘중하나를 이용하여 작성 가능한데 일반적으로 html에서는 "를 이용하여 작성
+       placeholder = 실제 인풋창에 문자열을 넣는 것이 아니라 어떠한 내용을 입력해야하는지 알려주는 속성이다.-->
+       인풋 텍스트 예제 <br>
+        <input type="text"placeholder="아이디" name="id">
+        <input type='text'value="아이디"><br>
+        <!-- value 속성 =실제값을 미리 입력하는 설정 -->
+        <!--
+            모든 태그에서 name 속성은 중복 가능
+            input 태그에서
+            name 속성 : 서버로 데이터를 보낼때 보내지는 이름
+            모든 태그에서 id속성은 중복이 불가능 하기 때문데 동일한 id를 가지는 태그가 있으면 하나만 인식 된다.
+            id 속성 : 중복 불가능
+
+        -->
+        <!-- submit,button,reset은 버튼을 만드는 속성이며, button태그로 대체가 가능하다. 단 infut태그의 버튼들은 단일 태그지만 button태그는 쌍태그이다.
+            submit은 서버로 데이터를 전송하기 위한 버튼
+            button은 단순한 버튼
+            reset은  같은 form 태그안의 input태그의 값 초기화 시키는 버튼
+
+        -->
+        인풋 태그를 이용한 버튼 예제 <br>
+        <input type="submit" value="제출">
+        <input type="button" value="버튼">
+        <input type="reset" value="초기화"><br>
+        버튼 태그를 이용한 버튼 예제 <br>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+        <button type="button">버튼</button>
+        <!--
+            button태그에 type을 지정하지 않은 경우 해당버튼이 form태그 안에 있다면 type이 submit으로 자동설정
+            form태그 밖에 있다면 type이 button으로 자동설정
+        -->
+        <br>type을 지정안한 버튼 태그 예제 <br>
+        <button>제출</button>
+        <br>
+
+    </form>
+</body>
+</html>
