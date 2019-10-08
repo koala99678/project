@@ -12,7 +12,11 @@
        placeholder = 실제 인풋창에 문자열을 넣는 것이 아니라 어떠한 내용을 입력해야하는지 알려주는 속성이다.-->
        인풋 텍스트 예제 <br>
         <input type="text"placeholder="아이디" name="id">
-        <input type='text'value="아이디"><br>
+        <input type='text'value="아이디" readonly><br>
+        <!--
+            read only 읽기 전용 -> 조회수, 회원정보 수정 아이디
+            required 필수항목
+        -->
         <!-- value 속성 =실제값을 미리 입력하는 설정 -->
         <!--
             모든 태그에서 name 속성은 중복 가능
@@ -42,8 +46,46 @@
         -->
         <br>type을 지정안한 버튼 태그 예제 <br>
         <button>제출</button>
-        <br>
+        <br>체크박스 예제<br>
+        당신이 좋아하는 과일은 ?(다중선택가능)<br>
+        <input type="checkbox" name="fruit"value='apple'>사과
+        <input type="checkbox" name="fruit"value='olange'>오렌지<br>
+        색상예제<br>
+        <input type="color" name="coler" >
+<br> 시간예제 <br>
+<input type="month"><br>
+<input type="week"><br>
+<input type="datetime-local"><br>
+<input type="time"><br>
+이메일 예제<br>
+<input type="email" name="email"><br>
+<input type="file" name="file"> 
+<br>히든예제: 안보이지만 input 태그가 있습니다.<br>
+<input type="hidden" name=""value="123">
+<br>이미지<br>
+<input type="image" src="http://newsimg.hankookilbo.com/2019/04/29/201904291390027161_3.jpg" alt="그림없음">
+<br>number예제 <br>
+<input type="number" >
+<br>비밀번호 예제<br>
+<input type="password">
+<br>라디오 예제<br>
+<input type="radio" name="gender" value="m"checked id="male">
+<label for="male">남자</label>
+<input type="radio" name="gender" value="f"checked id="fmale">
+<label for="fmale">여자</label>
+<br>url예제<br>
+<input type="url" name="" id="">
 
-    </form>
+<!--
+    유효성 검사는 검사하려는 문자열이 원하는 패턴인지 아닌지 확인하는 과정
+    기본 유효성 검사는 input 태그의 url속성이나 email속성이 있다
+    기타 방법으로는 jquery를 이용한 방법과 자바 스크립트를 이용한 방법이 있다.
+-->
+
+<br>seatch 예제 <br>
+<input type="search">
+<br>range예제<br>
+<input type="range" 
+>
 </body>
 </html>
