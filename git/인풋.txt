@@ -1,0 +1,9 @@
+form
+input type=" "
+
+placeholder=""
+value=""
+
+id= 모든 태그에서 중복 불가
+name= 모든 태그에서 중복 가능
+
