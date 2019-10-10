@@ -1,0 +1,40 @@
+테스트 관련 태그
+
+p, h ,br, b,i,strog, em, sup,sub, ins, del, hr
+
+input 태그
+type 속성
+
+- text, password,checkbox, radio
+
+value 속성
+
+="초기값"
+
+placeholder 속성
+checked 속성
+required 속성
+readonly 속성  - 읽기 전용
+
+
+
+
+a태그
+
+- 링크:다른 페이지 이동
+- 싱커: 현재 페이지 내에서 이동, #=> id 
+
+span 태그: 태그 자체는 아무 역할을 하지 않음
+하지만 css를 처리 할때 사용
+inline태그
+
+div 태그 : block태그 
+	   새라인 에서 시작하는 것을 제외 하면 아무역할 X
+	   css를 통해 여백, 크기, 위치를 조절 가능
+
+nav태그
+footer 태그
+header태그
+
+-의미만 부여
+
