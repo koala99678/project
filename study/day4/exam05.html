@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>disoplay 속성</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .inline{
+        /*inline은 가로와 높이, 여백의 길이를 지정할 수 없다
+        새라인에서 시작 되는 것이 아니라 현재 라인에서 이어서 작업을 한다.
+        단,앞에 형제 태그가 block이면 새라인에서 시작*/
+        display: inline;
+    }
+    .inline-block{
+        /*block의 가로,높이,여백의 길이를 지정할수 있는 특성과
+        inline의 현재 위치에서 이어서 작업하는 특성이 같이 적용*/
+        display: inline-block;
+    }
+    .block{
+        /*block은 가로,세로,여백의 길이를 지정할 수있고, 새 라인에서 시작하게 한다*/
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div >기본</div>
+    <div class="inline-block">inline-block</div>
+    <!-- 사이에 생기는 공백은 태그 사이의 엔터가 공백으로 입력되어 생기는 현상으로 자주 발생하고
+    이로 인해 문제들이 생길수 있다. -->
+    <div class="inline">inline</div>
+    <div class="block">block</div>
+    <div class="none">none</div>
+    
+</body>
+</html>
