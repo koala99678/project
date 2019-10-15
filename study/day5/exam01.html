@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display예제</title>
+    <style>
+    .list{
+        display: list-item;
+    }
+    .tb{
+        display: table;
+    }
+    .tr{
+        display: table-row;
+    }
+    .td{
+        display: table-cell;
+        border: 1px solid black;
+    }
+    .display-none{
+        display: none;
+    }
+    .visibility-hidden{
+        visibility:hidden;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>배</li>
+
+
+    </ul>
+    <div>
+        <span class="list">사과</span>
+        <span class="list">배</span>
+    </div>
+    <div>사과</div>
+    <div>배</div>
+
+    <div class="tb">
+        <div class="tr">
+                <div class="td">제목1</div>
+                <div class="td">제목2</div>
+        </div>
+        <div class="tr">
+                <div class="td">내용1</div>
+                <div class="td">내용2</div>
+        </div>
+    </div>
+    <!-- display-none ;은 공간 자체를 할당하지 않고 안보이게 감춘다.
+    visibility-hidden;는 공간 자체는 할당하고 안보이게 감춘다. -->
+    <div class="display-none">보이나요 안보이나요</div>
+    <div>보이나요 안보이나요</div>
+    <div class="visibility-hidden">보이나요 안보이나요</div>
+    <div>보이나요 안보이나요</div>
+
+
+</body>
+</html>

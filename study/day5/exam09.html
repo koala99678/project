@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        display: table;}
+    .tr{
+        display:table-row
+    }
+    .t{display:table-cell;
+    border: black solid 1px;
+    border-right: none;}
+    .t>a{
+        text-decoration: none;
+        color: black;
+    }
+    .t:last-of-type{
+        border-right: 1px solid black;
+        border-radius: 0 10px 10px 0;
+    }
+    .t:first-of-type{
+     
+        border-radius: 10px 0 0 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="tb">
+        <span class="tr">
+        <span class="t" ><a href="#">메뉴1</a></span>
+        <span class="t" ><a href="#">메뉴2</a></span>
+        <span class="t" ><a href="#">메뉴3</a></span>
+    </span>
+    </div>
+    
+</body>
+</html>

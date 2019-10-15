@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>마진 예제</title>
+    <style>
+        /* display : block인 경우 오른쪽 margin을 따로 지정하지 않아도 너비가 기본 브라우저 보다 작으면 자동으로 오른쪽에 마진이 생긴다 */
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px black solid;
+        /* 위 여백을 30px 할당
+        margin :  margin-top
+                  margin-right
+                  margin-bottom
+                  margin-left*/
+        margin-top: 30px;
+    }
+    .box2{
+        /* 부모태그의 100% */
+        width: 100%;
+        margin: 10px;
+    }
+    .center{
+        margin: 0px auto;
+    }
+    .box3{
+        display: inline-block;
+        float: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box box2"></div>
+    <div class="box center"></div>
+    <div class="box box3"></div>
+    <div class="box box3"></div>
+</body>
+</html>
