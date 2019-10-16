@@ -1,0 +1,11 @@
+whith는 box-sizing을 하지 않으면 기본 컨텐츠의 가로 이다,
+
+padding은 컨텐츠의 위치를 설정
+margin은 박스의 위치 설정
+
+position 속성은 3가지 값
+
+absolute : 전체화면(html)에서 특정 위치에 고정
+relative : 현재 위치를 기준
+fixed: 브라우저 화면에서 특정 위치에 고정
+	=> 위로 가기 버튼
