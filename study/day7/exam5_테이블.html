@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .tab{
+        display: table;
+        width: 100%;
+    }
+    .tr{
+        display: table-row;
+    }
+    .tb{
+        display: table-cell;
+        border-top: black 1px solid;
+        padding-right: 50px;
+        width: calc(100% / 3);
+    }
+  
+  .tab:last-of-type{
+
+    border-bottom: black 1px solid;
+  }
+  .tr:nth-of-type(2n){
+    background-color: yellow;
+  }
+  .tr:hover{
+      background-color:tomato;
+  }
+  .tr:first-of-type:hover{
+    background-color: transparent
+  }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tr">
+            <div class="tb">학생이름</div>
+            <div class="tb">국어</div>
+            <div class="tb">수학</div>
+        </div>
+        <div class="tr">
+            <div class="tb">홍길동</div>
+            <div class="tb">100</div>
+            <div class="tb">100</div>
+        </div>
+        <div class="tr">
+            <div class="tb">임꺽정</div>
+            <div class="tb">90</div>
+            <div class="tb">90</div>
+        </div>
+    
+    <div class="tr">
+        <div class="tb">홍길동</div>
+        <div class="tb">100</div>
+        <div class="tb">100</div>
+    </div>
+    <div class="tr">
+        <div class="tb">임꺽정</div>
+        <div class="tb">90</div>
+        <div class="tb">90</div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
