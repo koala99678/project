@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex 예제</title>
+    <style>
+    .par{
+       
+        border: 1px solid black;
+        /* display :flex는 자식들의 가로 길이의 합이 부모의 가로보다 크더라도 부모의 가로 길이에 맞춘다.
+        자식들의 가로가 작은경우 변화 X, 큰 경우는 자식들의 비율대로 길이가 할당된다.
+        display가 flex인경우 justify-content를 이용하여 가운데 정렬을 쉽게 할수 있다.
+        flex는 엔터에 의한 공백과 일반 공백(스페이스)을 무시한다.  */
+        display:flex;
+        justify-content: center;
+
+    }
+    .ch{
+        height: 50px;
+        box-sizing: border-box;
+        border: 2px solid ;
+    }
+    .ch1{
+        width: 200px;
+        border-color: blue;
+       
+    }
+    .ch2{
+        width: 400px;
+        border-color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="par">
+        <div class="ch ch1"></div>
+        <div class="ch ch2"></div>
+    </div>
+</body>
+</html>
