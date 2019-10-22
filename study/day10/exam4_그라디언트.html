@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+        }
+    .g1{
+        /* linear-gradient: 선형으로 그라디언트 적용 
+        left : 방향
+        #ff0000: 시작색
+        #ffff00: 중간 색
+        #00ff00: 끝 색*/
+      
+        background: -webkit-linear-gradient(left,#ff0000 0%,#ffff00 50%,#00ff00 100%);
+    }
+    .g2{
+         /*gradient: 그라디언트 적용
+        linear(직선) : 선형 그라디언트로 적용
+        left top: 왼쪽상단에서 시작해서
+        left bottom: 왼쪽하단으로 끝남
+        위의 두 값을 만들어서 그라디언트를 적용하는 방법
+        color-stop(지점, 색상): 그라디언트를 적용하기 위해 지점과 색상을 설정하는 함수*/
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));
+    }
+    </style>
+</head>
+<body>
+    <div class="g1 box"></div>
+    <div class="g2 box"></div>
+
+
+</body>
+</html>

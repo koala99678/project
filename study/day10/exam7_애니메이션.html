@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 
+        p.292
+        animation과 transtion
+    공통점 :어떠한 효과를 준다
+    차이점 : transtion- 가상선택자가 필요함 변경된 속성으로 변하는 과정을 관리(과정만)
+             animation- 가상선택자가 필요 없고 animation으로 이벤트를 등록 (최종 결과물)
+            -->
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        background: -webkit-gradient(linear, left top , right top, color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));
+       /* animation-name: 적용할 애니메이션의 이름을 넣어준다
+        animation-duration: 애니메이션 지속시간
+        animation-iteration-count: 애니메이션 반복 횟수*/
+       
+        animation-name: scale;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+         /*  animation-delay: 애니메이션일 로딩된후 애니메이션이 실행되기 전까지 지연시간
+         animation-play-state: 애니메이션을 멈추(paused)거나 다시시작(running)하는 속성,
+         나중에 자바 스크립트를 이용해야함
+        animation-fill-mode: 애니메이션이 종료된후 상태를 처음 상태로 돌아갈지(backwards) 현상태 (forwards)로 갈지 설정하는 속성
+        현 예제에서는 무한 반복, 시작과 끝이 같아서 크게 의미가 없다.
+          */
+        animation-delay: 1s;
+        animation-play-state: running;
+        animation-fill-mode: backwards;
+        /* animation-direction: 애니메이션 진행방향
+         normal :0% >100%
+         reverse :100% >0%
+         alernate : 0% >100% >0%
+         alernate  reverse: 100% >0% >100%
+
+         */
+        animation-direction: alternate;
+    }
+    /* @keyframes xxx : xxx 이라는 애니메이션을 등록 */
+@keyframes scale {
+    /* %는 애니메이션 실행시간의 전체시간을 기준으로 계산 한다.
+    0%(from)) : 시작
+    50% :중간
+    100%(to) : 끝
+    실행시간의 전체 시간은 animtion-duration 속성으로 지정한다.
+    from , to를 사용하는 경우 중간에 %를 잘 사용하지 않는다. */
+ 0%{}
+ 
+ 100%{
+    width: 200px;
+     height: 200px;
+ }
+}
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+</body>
+</html>

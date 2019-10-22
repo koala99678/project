@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            float: left;
+        }
+      .p::after{
+          content: "";
+          clear: both;
+          display: block;
+      }
+    
+      .g1{ background: -webkit-gradient(linear,left top,right bottom,color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));
+    }
+      .g2{ background: -webkit-gradient(linear,right top,left bottom,color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));
+    }
+      .g3{ background: -webkit-gradient(linear,left bottom,right top,color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));
+        }
+      .g4{ background: -webkit-gradient(linear,right bottom,left top,color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));
+    }
+    .g5{background: -webkit-radial-gradient(center, ellipse cover,#ff0000 0%,#ffff00 50%,#00ff00 100%);}
+    .g6{background: -webkit-gradient(radial,center center, 0 center center, 100% ,color-stop(0%, #f00),color-stop(50%, #ff0),color-stop(100%, #0f0));}
+    </style>
+</head>
+<body>
+    <div class="p">
+        <div class="g1 box"></div>
+        <div class="g2 box"></div>
+    </div>
+    <div class="p">
+        <div class="g3 box"></div>
+        <div class="g4 box"></div>
+    </div>
+    <div class="p">
+        <div class="g5 box"></div>
+        <div class="g6 box"></div>
+    </div>
+</body>
+</html>

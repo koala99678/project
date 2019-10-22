@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>그림자 효과</title>
+    <style>
+        div{
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 20px;
+        }
+    .sha1{
+         /* text-shadow 속성 값 순서
+        1. 수평으로 이동 시킬 거리 
+        2. 수직으로 이동 시킬 거리
+        3. 번짐 효과
+        4. 색상
+        단위가 같기 때문에 순서가 틀리면 원하는 결과가 나오지 않음*/
+        text-shadow: 5px 10px 0 rgba(0, 0, 0, 0.3) ;
+        }
+    .sha2{
+        color: white;
+        text-shadow: 0 5px 5px rgb(0, 0, 0) ;
+    }
+    .sha3{
+        text-shadow: 2px 1px 0 #fff,
+                    0 0 8px rgb(0, 0, 0) ;
+    }
+    .box1{
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    .box2{
+        box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.5);
+    }
+    .box3{
+        box-shadow: 0 0 2px black,
+                    0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    </style>
+
+</head>
+<body>
+    <div class="sha1 box1">그림자 효과1</div>
+    <div class="sha2 box2">그림자 효과2</div>
+    <div class="sha3 box3">그림자 효과3</div>
+</body>
+</html>
