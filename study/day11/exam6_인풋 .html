@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    .co{
+        width: 800px;
+        position: absolute;
+        left: 50%;
+        margin: 50px auto;
+        box-sizing: border-box;
+        border: black solid 1px;
+    }
+    .co>h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .box-l{
+        width: 30%;
+        float: left;
+        padding-left: 40px;
+    }
+    .box-r{
+        width: 70%;
+        float: right;
+    }
+    .box::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .box-pon>input{
+        width: 150px;
+    }
+    .box-sub{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    </style>
+</head>
+<body>
+    
+           
+    <form method="GET" action="/test" class="co">
+        <h1>회원가입</h1>
+        <div class="box box-id">
+            <div class="box-l">아이디</div>
+            <div class="box-r"><input type="text" name="id" autofocus></div>
+        </div>
+        <div class="box box-pw">
+            <div class="box-l">비밀번호</div>
+            <div class="box-r"><input type="password" name="pw"></div>
+        </div>
+        <div class="box box-pw2">
+            <div class="box-l">비밀번호 확인</div>
+            <div class="box-r"><input type="password" name="pw2"></div>
+        </div>
+        <div class="box box-email">
+            <div class="box-l">이메일</div>
+            <div class="box-r"><input type="email" name="email"></div>
+        </div>
+        <div class="box box-gender">
+            <div class="box-l">성별</div>
+            <div class="box-r">
+                <input type="radio" name="gender" value="남자" id="male" checked>
+            <label for="male">남자</label>
+            <input type="radio" name="gender" value="여자" id="fmale">
+            <label for="fmale">여자</label>
+            </div>
+        <div class="box box-pon">
+            <div class="box-l">전화번호</div>
+            <div class="box-r"><input type="number" name="pon"></div>-
+            <input type="number" name="pon"></div>-
+            <input type="number" name="pon"></div>
+        </div>
+        <div class="box box-sub">
+            <button>회원가입</button>
+        </div>
+    
+    
+    
+
+</form>
+</body>
+</html>

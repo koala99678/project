@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{
+            /* perspective: Z축을 설정하는 속성으로 z 축이 필요한 태그의 부모에 할당해야 한다. 
+            
+            p.309 설명은 translateZ의 값이 고정인 상태에서 
+            perspective의 값만 변경 했을 때의 설명으로
+            perspective의 값이 클수록 이미지가 작아진다
+            */
+            perspective: 1000px;
+            perspective-origin: 0 0;
+        }
+    p img{
+        position:absolute;
+        top: 40%;
+        left: 40%;
+        /*  translate(0px,0px) : 좌표를 이동하는 기능 */
+        transform: translateZ(100px) ;
+        /* scale(x,x) : 크기 변경으로 배수로 값을 설정 */
+        transform: scale(2,2);
+        transform: scaleZ(3) translateZ(100px) ;
+        transform: rotateY(30deg);
+        transform: translateZ(300px);
+     /* 
+     rotate: 축으로 회전시키는 속성, x축과 y축은 회전되었다는 것을 보여주기 위해 모양이 틀어진다. (사다리꼴 같은 모양)
+            각도를 입력해야 하기 때문에 단위는 deg를 사용한다
+     translate : 축을 기준으로 이동시키는 속성, z축은 perspective를 부모에 추가 해야한다
+     skew : 축을 기준으로 기울이는 속성, 평행사변형이 된다.
+     maxtrix :scale + rotate + translate + skew를 한번에 적용하는 속성
+            scaleX,skewY,skewZ,scaleY,translateY,translateZ
+            ((사용하기 어려움))
+      */
+    }
+    </style>
+</head>
+
+<body>
+    <p><img src="../day2/멈머.jpg" alt=""></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>필터 예제</title>
+    <style>
+        /* filter : 앞에서 배운 opacity, box-shadow와 같은 속성들이 브라우저 버전 별로 적용이 되지 않을경우 사용 하기 위한 방법이다. */
+    .blur>img{
+        /* blur (흐리게): 픽셀값이 높아질수록 흐려짐 */
+        filter: blur(4px);
+
+    }
+    .brightness{
+        /* %가 낮을수록 어두워 지며 100%가 원본 100%가 넘을시 밝아진다. */
+                filter:brightness(50%)}
+    .contrast{
+        /* contrast(대비): %가 낮을 수록 색의 명확도가 낮아짐 */
+        filter: contrast(200%);
+    }
+    </style>
+</head>
+<body>
+    <p class="blur"><img src="../day2/멈머.jpg" alt=""></p>
+    <p class="brightness"><img src="../day2/멈머.jpg" alt=""></p>
+    <p class="contrast"><img src="../day2/멈머.jpg" alt=""></p>
+</body>
+</html>
