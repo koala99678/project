@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- link 태그를 이용하여 css를 연결할때 주의 사항
+    -link의 순서가 중요 
+        1.외부에서 제공하는 CSS(부트스트랩, 각종 api)
+        2.개발자(나)가 작성한 글로벌 css(모든 hrml에 적용하고 있는 css)
+        3.해당 파일에만 적용가능한 css
+-->
+    <title>부트 스트랩 예제</title>
+<!-- 
+    col-n : 12개를 나눈 조각중 n개 크기의 공간을 할당, 576px 미만
+    col-sm-n : 576px 이상 768px미만
+    col-md-n : 768px 이상 992px미만
+    col-lg-n : 992px 이상 1200px미만
+    col-xl-n : 1200px
+    offset-n : 12개를 나눈 조각중 n개의 크기를 건너뜀
+    offset-sm-n : 576px 이상 768px미만
+-->
+<style>
+.box{
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 50px;
+}
+</style>
+</head>
+<body>
+    <div class="col-12 offset-sm-3 col-sm-6 box text-black-50">안녕하세요</div>
+
+    <table class="table table-dark table-hover">
+        <tr>
+            <td>제목1</td>
+            <td>제목2</td>
+        </tr>
+        <tr>
+            <td>예제1</td>
+            <td>예제2</td>
+        </tr>
+    </table>
+    <img src="../day2/멈머.jpg" alt="" class="rouded">
+    <img src="../day2/멈머.jpg" alt="" class="rounded-circle">
+    <img src="../day2/멈머.jpg" alt="" class="img-thumbnail d-block mx-auto">
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>
+      <div class="">
+      <button type="button" class="btn">Basic</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-outline-danger">Danger</button>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+             Sony
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Tablet</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+          </div>
+        </div>
+    </div>
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+        </ul>
+      </div>
+    
+</body>
+</html>
