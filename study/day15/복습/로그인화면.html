@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0pc;
+            box-sizing: border-box;
+        }
+    form{
+        border: red 1px solid;
+        height: 500px;
+        width: 500px;
+        position: absolute;
+        top: 50% ;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -250px;
+        
+    }
+    div{
+    margin: 120px;
+    }
+    form input{
+        display:block;
+    }
+@media screen and (max-width: 560px) {
+    form{
+        
+        height: 100vh;
+        margin: 0 auto;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left:calc(-250px + 37.5%);
+        
+    }
+}
+    </style>
+</head>
+<body>
+<form action="" >
+    <div>
+    <p  >아이디: </p><input  type="text" >
+    <p >패스워드:</p> <input  type="password">
+    <button>회원가입</button>
+    </div>
+</form>
+   
+</body>
+</html>
