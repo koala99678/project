@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>switch문</title>
+    <script>
+    /*
+    switch문 문법
+    switch(변수나 식){
+        case 값 1: //if(변수 == 값1)
+            실행문1;
+            break;
+        case 값 2: //else if(변수 == 값2)
+            실행문2;
+            break;
+        default: //else
+            실행문3
+    }
+    break : switch 문을 빠져나오는 역할
+    switch 문에서 case와 일치하는 값이 있으면 해당하는 실행문을 실행하고 break를 찾는다.
+    break가 있으면 switch를 빠져나오고
+    없으면 다음 case의 실행문으로 가서 해당 실행문을 실행하고,  break를 찾을 때까지 반복한다.
+    상황에 따라  break를 넣지 않을 때도 있다.
+    */
+    var num = 3;
+    switch(num % 2){
+        case 0:
+         console.log('',num,'은 짝수');
+         break
+         case 1:
+         console.log('',num,'은 홀수');
+         break
+    }
+    var month=17
+    switch(month){
+        case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+        console.log('',month,'월은 31까지 있습니다.')
+        break
+        case 4:case 6:case 9:case 11:
+        console.log('',month,'월은 31까지 있습니다.')
+        break
+        case 2:
+        console.log('',month,'월은 28까지 있습니다.')
+        break
+        default:
+        console.log('',month,'는 없는 달입니다.')
+        }
+        /*
+        1.식의 값이 제한 되어 있는경우 : % 연산자 이용
+            -홀짝 예제
+        2. 사용하는 변수의 값이 제한적일 때 
+            -달 마지막일 출력 예제, 산술 연산예제
+
+    case에는 상수만 와야한다.(변수X)
+        */
+        /*
+        if문으로 작성했던 산술연산 예제를 swicth문으로 변환
+        */
+        var num1=10, num2=20, or='+'
+        switch(or){
+            case '+':
+            console.log('',num1,or,num2,'=',num2+num1)
+            break
+            case '-':
+            console.log('',num1,or,num2,'=',num2-num1)
+            break
+            case '*':
+            console.log('',num1,or,num2,'=',num2*num1)
+            break
+            case '/':
+            console.log('',num1,or,num2,'=',num2/num1)
+            break
+            case '%':
+            console.log('',num1,or,num2,'=',num2%num1)
+            break
+            default:
+            console.log('',num1,or,num2,'=','잘못된 식입니다.')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
