@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /*
+    이중반복문:  반복문안에 실행문자리에 반복문이 들어가 있는 형태
+    for( ; ; ){
+        for( ; ; ){
+
+        } 
+           }
+    ***** // i=1
+    ***** // i=2
+    ***** // i=3
+    를 화면에 출력하는 예제
+    */
+var i,j,str='',num=5,b
+
+for (i=1;i<=num;i++) {
+   for (j=1;j<=num;j++) {
+//문자열에 +=으로 뒤에 문자열이 오면 두 문자열을 합친 문자열이 된다.
+//문자열1=문자열1+문자열2
+//문자열 1뒤에 문자열 2를 붙인뒤 문자열 1에 다시 저장
+      str+='*'
+   }
+   //'\n'문자열에 엔터쳐주는 역할
+    str+='\n'
+}
+console.log(str)
+
+str=''
+for (i=1;i<=5;i++) {
+   for (j=1;j<=i;j++) {
+    str+='*'
+   }
+   str+='\n'
+}
+console.log(str)
+
+str=''
+for (i=1;i<=5;i++) {
+   for (b=i;b<=num-i;b++) {
+    str+=' '
+   }
+   for (j=1;j<=i;j++) {
+    str+='*'
+   }
+   str+='\n'
+}
+console.log(str)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
