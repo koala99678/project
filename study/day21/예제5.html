@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+    /*
+    html(),text()는 선택된 요소 안에 값을 설정하는 함수라면
+    append(), perpend(), after(),before() 함수는 선택된 요소 앞이나 뒤에 값을 설정하는 함수
+    
+    append() : 선택된 요소 안의 마지막 요소 다음에 추가 (자식 요소 추가)
+    prepend() : 선택된 요소 안의 제일 처음 요소 앞에 추가 (자식 요소 추가)
+    after() : 선택 된 요소 다음에 추가 (형제 요소 추가)
+    before() : 선택 된 요소 앞에 추가(형제 요소 추가)
+
+    appendTo() :
+    $(기준요소).appendTo(추가요소)
+    prependTo() :
+    $(추가요소).appendTo(기준요소)
+    */
+    $(document).ready(function(){
+        $('.selsct').append('<li>5</li>')
+        $('.selsct').prepend('<li>0</li>')
+        $('.selsct').after('<ul><li>1-1</li></ul>')
+        $('.selsct').before('<ul><li>0-1</li></ul>')
+        $('.more').click(function(){
+            $('.img').append('<img src="../day2/멈머.jpg" alt="">')
+        })
+    })
+    </script>
+    <style>
+    .more{
+        background-color: palevioletred;
+        border:  1px solid darkblue;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <ul class="selsct">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+     </ul>
+     <div class="img">
+            <img src="../day2/멈머.jpg" alt="">
+            <img src="../day2/멈머.jpg" alt="">
+            <img src="../day2/멈머.jpg" alt="">
+        </div>
+        <button class="more">더보기</button>
+</body>
+</html>

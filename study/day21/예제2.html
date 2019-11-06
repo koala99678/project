@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+    $(document).ready(function(){
+        $('.ham').click(function(){
+            if ($('.ani').hasClass('show')) {
+                $('.ani').animate({left:'0'},1000)
+            }
+            else{
+                $('.ani').animate({left:'-200'},1000)
+            }
+            //사이드 메뉴가 나왔는지 안나왔는지 확인하기 위해 show라는 클래스를 추가 하여 이용(css는 없는 클래스)
+            $('.ani').toggleClass('show')
+        })
+    })
+    </script>
+    <style>
+    *{
+        padding: 0;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .nav{
+    background-color: orange;
+    height: 100px;
+    }
+    .ham{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 80px;
+    width: 80px;
+    background-color: palegoldenrod;
+    cursor: pointer;
+    }
+    .ani{
+        height: 600px;
+        width: 200px;
+        background-color: palevioletred;
+        position: absolute;
+        left: -200px;
+        
+    }
+    .show{
+        position: absolute;
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="ham"></div>
+    </div>
+    <div class="ani show"></div>
+</body>
+</html>
