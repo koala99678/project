@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+    $(document).ready(function(){
+        $('.btn-box>button').click(function(){
+            var page =$('.page').text()
+            page = parseInt(page)
+            var max = $('.max').text()
+            max = parseInt(max)
+            if($(this).hasClass('add')){
+                page +=1
+                if ( page > max ) {
+                    page = 1
+                }
+            }else{
+                page -=1
+                if ( page ==0 ) {
+                    page = max
+                }
+            }
+            $('.page').text(page)
+        })
+        
+    })
+    </script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+    .btn-box>button{
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: 1px solid green;
+        cursor: pointer;
+    }
+    .btn-box>button:last-child{
+        border-left: none;
+    }
+    .btn-box{display: flex;}
+    .page{
+        font-weight: 700;
+    }
+    body{
+        padding: 30px;
+    }
+    </style>
+</head>
+<body>
+   <span class="page">3</span>/<span class="max">5</span>
+   <div class="btn-box">
+       <button class="sub"><</button>
+       <button class="add">></button>
+   </div>
+</body>
+</html>
