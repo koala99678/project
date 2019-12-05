@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>설문조사</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        var cnt=0
+    $(function(){
+          $('.checkbox').change(function(){
+           if ( $(this).prop('checked')) {
+               cnt++;
+           }
+           else{
+               cnt--;
+           }
+          })
+          $('button').click(function(){
+
+            if (cnt==0) {
+                alert('하나이상 선택해주세요')
+                return false
+            }
+            else{
+
+            }
+             
+          })
+    })
+    </script>
+</head>
+<body>
+    <form action="">
+        <h1>취미를 선택하세요(1개 이상)</h1>
+        <div>
+                <input type="checkbox" class="checkbox">야구
+        </div>
+        <div>
+                <input type="checkbox" class="checkbox">농구
+        </div>
+        
+        <div>
+                <input type="checkbox" class="checkbox">축구
+        </div>
+        
+        <div>
+                <input type="checkbox" class="checkbox">기타
+        </div>
+        
+        <button>제출</button>
+
+
+</form>
+</body>
+</html>

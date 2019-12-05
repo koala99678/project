@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>설문조사</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        /*
+        $('선택자').each(function(){
+           })
+        each : 요소들을 하나씩 꺼내어 작업 할때 사용한다
+        (이벤트 안에 사용)
+
+        $('선택자').이벤트명(function(){
+            $('선택자').each(function(){
+
+            })
+        })
+        */
+        var cnt1=0
+        //cnt1은 스크립트가 실행될때 선언되어 페이지가 끝날때 까지 유지된다.
+    $(function(){
+          $('button').click(function(){
+              //버튼을 클릭할 때 cnt2가 생성되어 클릭이벤트가 종료되기 전까지 유지된다.
+              //지역변수(cnt1) 전역변수(cnt2)의 차이
+            var cnt2=0
+            cnt1++
+            cnt2++
+            console.log('cnt1',cnt1)
+            console.log('cnt2',cnt2)
+            var cnt = 0
+            ,str = ''
+            ,arr=[]
+            //체크된 체크박스의 갯수
+            //클래스가 checkbox인 요소들을 각각 가져와서 function()에 구현된 작업을 실행
+            $('.checkbox').each(function(){
+                /*
+                각 체크박스의 체크드 속성이 트루인 요소의 갯수 파악
+                밑에서 의미하는 this는 체크 박스안에서 꺼내온 요소임
+                */
+               if ($(this).prop('checked')) {
+                   cnt++
+                   str+= (cnt==1?'':',') + $(this).val()
+                   arr.push($(this).val())
+               }
+            })
+            if (cnt==0) {
+                alert('하나이상 선택해주세요')
+                return false
+            }
+            else{
+                        // alert(str)
+                        alert(arr.join(','))
+            }
+
+          })
+    })
+    </script>
+</head>
+<body>
+    <form action="">
+        <h1>취미를 선택하세요(1개 이상)</h1>
+        <div>
+                <input type="checkbox" class="checkbox" value="야구">야구
+        </div>
+        <div>
+                <input type="checkbox" class="checkbox" value="농구">농구
+        </div>
+        
+        <div>
+                <input type="checkbox" class="checkbox" value="축구">축구
+        </div>
+        
+        <div>
+                <input type="checkbox" class="checkbox" value="기타">기타
+        </div>
+        
+        <button>제출</button>
+
+
+</form>
+</body>
+</html>
