@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="실습.css">
+    <script src="https://kit.fontawesome.com/77e3f1eeb9.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="실습.js"></script>
+    <script>
+    $(function(){
+        $('.header-botr-item').click(function(){
+            $('.header-botr-item').removeClass('mint')
+            $(this).toggleClass('mint')
+        })
+        $('.cont1-topm>button').click(function(){
+            $('.cont1-topm>button').css('border-color',' white')
+            $('.cont1-topm>button').css('color',' white')
+            $(this).css('color',' #1dd2af')
+            $(this).css('border-color',' #1dd2af')
+        })
+        $('.tabMenu .swiper-slide').click(function(){
+            $('.tabMenu .swiper-slide').css('border-color',' white')
+            $('.tabMenu .swiper-slide').css('background-color',' white')
+            $(this).css('border-color',' #1dd2af')
+            $(this).css('background-color',' #1dd2af')
+        })
+        $('.tabMenu2 .swiper-slide').click(function(){
+            $('.tabMenu2 .swiper-slide').css('border-top','1px solid black')
+            $(this).css('border-top','5px solid #1dd2af')
+        })
+        $('.footer-nav>span').click(function(){
+            $('.footer-nav>span').css('color',' white')
+            $(this).css('color',' #1dd2af')
+        })
+        $('.cont1-topl,.cont1-topr').click(function(){
+            $('.cont1-topl').css('background-color','white')
+            $('.cont1-topl').css('opacity','0.2')
+            $('.cont1-topr').css('background-color','white')
+            $('.cont1-topr').css('opacity','0.2')
+            $(this).css('background-color',' #1dd2af')
+            $(this).css('opacity','1.0')
+        })
+        
+    })
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="header-top-box box1">
+                <div class="header-topl">
+                    <span class="header-topl-item">
+                        <i class="fas fa-user"></i>
+                        <p>Agent Login</p>
+                    </span>
+                    <span class="header-topl-item">
+                            <i class="fas fa-user"></i>
+                        <p>Customer Login</p>
+                    </span>
+                   <span class="header-topl-item">
+                        <i class="fas fa-file"></i>
+                        <p>Not a Member?</p>
+                        <p class="mint">Register</p>
+                    </span>
+                   <span class="header-topl-item">
+                        <p>Call Us Now :815-123-4567</p> 
+                    </span>
+                </div>
+                <div class="header-topr">
+                    <span  class="header-topr-item">
+                            <i class="fab fa-facebook"></i>
+                    </span>
+                    <span  class="header-topr-item">
+                            <i class="fab fa-twitter"></i>
+                    </span>
+                    <span  class="header-topr-item">
+                            <i class="fab fa-tumblr"></i>
+                    </span>
+                    <span  class="header-topr-item">
+                            <i class="fab fa-pinterest"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="header-bot">
+                <div class="header-bot-box box1">
+                    <div class="header-botl">
+                        <P>V</P>
+                        <P class="mint">O</P>
+                        <P>YAGE</P>
+                    </div>
+
+                    <div class="header-botr">
+                        <div class="header-botr-item">HOME</div>
+                        <div class="header-botr-item">DESTINATIONS</div>
+                        <div class="header-botr-item">CRIUSES</div>
+                        <div class="header-botr-item">SPECIALS</div>
+                        <div class="header-botr-item">HOLIDAYS</div>
+                        <div class="header-botr-item">BLOG</div>
+                        <div class="header-botr-item">
+                                <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="cont">
+        <div class="cont1">
+            <div class="cont1-top">
+                <div class="cont1-topl ">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="cont1-topm">
+                    <p>TO TRAVEL IS TO LIVE</p>
+                    <p>You Don't Need to Disappear. All you need is destination</p>
+                    <button>SHOW ON THE MAP</button><button>MORE INFO</button>
+                </div>
+                <div class="cont1-topr">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="cont1-img-filter"></div>
+            <img  class="cont1-img" src="/실습/실습이미지/메인이미지.jpg" alt="">
+            <div class="cont1-box">
+                <div class="box1">
+                <span class="cont1-box-item">
+                    <span>
+                    <p>FIND YOUR</p>
+                    <p>HONYDAYS</p>
+                </span>
+                </span> 
+                <span class="cont1-box-item">
+                    <P>Where</P>
+                    <input type="text" placeholder=" distination">
+                </span>
+                <span class="cont1-box-item">
+                    <P>When</P>
+                    <input type="text" placeholder=" select date">
+                </span>
+                    <button>search</button>
+                
+            </div>
+            </div>
+        </div>
+        <div class="cont2">
+            <div class="cont2-tittle">
+                <p>SPECIAL OFFERS</p>
+                <p>Best 2014 packages where people love to stay!</p>
+            </div>
+            <div class="swiper-container tabMenu">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-hash="slide1">
+                    <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                    <div>
+                        <span>
+                            <p>Hong Kong & Macau</p>
+                            <p>Bonus Extras!</p>
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    </div>
+                    <div class="swiper-slide" data-hash="slide2">
+                        <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                        <div>
+                            <span>
+                                <p>Hong Kong & Macau</p>
+                                <p>Bonus Extras!</p>
+                            </span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-hash="slide3">
+                        <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                        <div>
+                            <span>
+                                <p>Hong Kong & Macau</p>
+                                <p>Bonus Extras!</p>
+                            </span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-hash="slide4">
+                        <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                        <div>
+                            <span>
+                                <p>Hong Kong & Macau</p>
+                                <p>Bonus Extras!</p>
+                            </span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-hash="slide5">
+                        <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                        <div>
+                            <span>
+                                <p>Hong Kong & Macau</p>
+                                <p>Bonus Extras!</p>
+                            </span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-hash="slide6">
+                        <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                        <div>
+                            <span>
+                                <p>Hong Kong & Macau</p>
+                                <p>Bonus Extras!</p>
+                            </span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-hash="slide7">
+                        <img src="../실습/실습이미지/sub_01.jpg" alt="">
+                        <div>
+                            <span>
+                                <p>Hong Kong & Macau</p>
+                                <p>Bonus Extras!</p>
+                            </span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont3">
+            <div class="cont3-img-filter"></div>
+            <img  class="cont3-img" src="/실습/실습이미지/메인이미지.jpg" alt="">
+            <div class="cont3-box">
+                <div class="cont3-tittle">
+                    <p>HOLIDAYS TYPE</p>
+                    <p>get explore your dream to travel the world!</p>
+                </div>
+                <div class="cont3-icon">
+                    <div class="cont3-icon-item">
+                        <div class="elpise">
+                                <i class="fas fa-ship"></i>
+                        </div>
+                        <p>Cruise</p>
+                    </div>
+                    <div class="cont3-icon-item">
+                            <div class="elpise">
+                                    <i class="fas fa-ship"></i>
+                            </div>
+                            <p>Cruise</p>
+                        </div>
+                    <div class="cont3-icon-item">
+                            <div class="elpise">
+                                    <i class="fas fa-ship"></i>
+                            </div>
+                            <p>Cruise</p>
+                        </div>
+                    <div class="cont3-icon-item">
+                            <div class="elpise">
+                                    <i class="fas fa-ship"></i>
+                            </div>
+                            <p>Cruise</p>
+                        </div>
+                    <div class="cont3-icon-item">
+                            <div class="elpise">
+                                    <i class="fas fa-ship"></i>
+                            </div>
+                            <p>Cruise</p>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cont4">
+                <div class="cont4-tittle">
+                        <p>HAPPY CLIENTS</p>
+                        <p>what customer say about us and why love our services!</p>
+                    </div>
+                    <div class="swiper-container tabMenu2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide cont4-item" data-hash="slide1">
+                                    dd
+                                </div>
+                                <div class="swiper-slide cont4-item" data-hash="slide2">
+                                    하늘정원
+                                </div>
+                                <div class="swiper-slide cont4-item" data-hash="slide3">
+                                    국화축제
+                                </div>
+                                <div class="swiper-slide cont4-item" data-hash="slide4">
+                                    하늘정원
+                                </div>
+                                <div class="swiper-slide cont4-item" data-hash="slide5">
+                                    국화축제
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-top box1">
+            <div class="footer-top-item">
+                <h1 class="mint">Newsletter</h1>
+                <div class="footer-top-text">
+                    <p>Duis autem vel eum iriure dolor in</p>
+                    <p>hendrerit in vulputate velit esse</p>
+                    <p>molestie consequat, vel illum dolore.</p>
+                </div>
+                <div class="footer-top-input">
+                    <input type="text" placeholder=" Subscribes...">
+                    <button>GO</button>
+                </div>
+            </div>
+            <div class="footer-top-item">
+                <h1 class="mint">Latest News</h1>
+                <div>
+                    <div class="footer-top-box">
+                    <div class="footer-img-box"></div>
+                        <p>Snowboarding is fun!</p>
+                        <p>December12,2012-9:11 pm</p>
+                </div>
+                <div class="footer-top-box">
+                    <div class="footer-img-box"></div>
+                    
+                        <p>Postformat Gallery:Multiple</p>
+                        <p>images</p>
+                        <p> October21,2013-3:31 pm </p>
+                </div>
+                </div>
+            </div>
+            <div class="footer-top-item">
+                <h1 class="mint">Tags</h1>
+                <div class="footer-tags">
+                    <span>Agent Login</span>
+                    <span>Customer Login</span>
+                    <span>Not a Member?</span>
+                    <span>Contact</span>
+                    <span>New Horizons</span>
+                    <span>Lanscape</span>
+                    <span>Tags</span>
+                    <span>Nice</span>
+                    <span>Some</span>
+                    <span>Portrait</span>
+                </div>
+            </div>
+            <div class="footer-top-item">
+                <h1 class="mint">Address</h1>
+                <div class="footer-email">
+                    <div>DisSachbearbeiter Schonhauser Allee 167c,10435 Berlin Germany</div>
+                <div class="mint">E-mail:</div><div>moin@blindtextgenerator.de</div>
+            </div>
+            <div class="footer-sns">
+                    <span>
+                         <i class="fab fa-facebook"></i>
+                    </span> 
+                    <span>
+                       <i class="fab fa-twitter"></i>
+                 </span>
+                 <span>
+                        <i class="fab fa-tumblr"></i>
+                  </span>
+                 <span>
+                     <i class="fab fa-pinterest"></i>
+                 </span>
+                 </div>
+            </div>
+           
+        </div>
+        <div class="foouter-line"></div>
+        <div class="footer-bot">
+            <div class="footer-nav">
+                <span>Home</span>::
+                <span>Destinations</span>::
+                <span>Criuses</span>::
+                <span>Specils</span>::
+                <span>Holidays</span>::
+                <span>Blog</span>::
+                <span>Contact Us</span>
+            </div>
+            <div>copyright@voyage.All Rught Reserved.</div>
+            <div class="footer-tree">
+                    <i class="fas fa-arrow-up"></i>
+                <img src="../실습/실습이미지/Untitled-2.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

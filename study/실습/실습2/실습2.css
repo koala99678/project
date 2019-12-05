@@ -1,0 +1,82 @@
+@charset 'utf-8';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 헤더 */
+.head{
+    height: 157px;
+    width: 100%;
+    border: 1px solid black;
+}
+.head-t{
+    float: right;
+}
+.head-t-text{
+    font-size: 7px;
+    margin-top: 14px;
+    float: left;
+}
+.head-t-text>div{
+    float: left; 
+    cursor: pointer;
+}
+.head-t-line{
+    width: 1px;
+    height: 7px;
+    background-color: black;
+    display:block;
+    float: left;
+    margin: 4px 4px 0;
+}
+.head-t-sns{
+    float: left;
+}
+.head-t-sns>div{
+    float: left;
+    left: 4px;
+    margin-top:9px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.head-t-sns>div:first-of-type{
+    margin-left: 10px;
+    color: #4060b7;
+}
+.head-t-sns>div:nth-of-type(2){
+    color: #3cdffe;
+}
+.head-t-sns>div:nth-of-type(3){
+    color: #985aee;
+}
+.head-b{
+    float: left;
+}
+.head-bl{
+    float: left;
+}
+.head-br{
+    float: right;
+}
+/* 바디 */
+.body{
+    height: 917px;
+    width: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.bodyimg{
+    height: 917px;
+    width: 100%;
+}
+/* 푸터 */
+.foot{
+    height: 128px;
+    width: 100%;
+    border: 1px solid black;
+}
+/* 전체 */
+.box{
+    margin: 0 460px;
+}
