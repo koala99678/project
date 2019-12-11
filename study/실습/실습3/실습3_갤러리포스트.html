@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="실습3.css">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/77e3f1eeb9.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    
+    <script src="실습3.js"></script>
+    <script>
+    $(function(){
+        $('.head-menu>a').click(function(){
+            $('.head-menu>a').css('color','black')
+            $(this).css('color','#0ba39c')
+        })
+        $('.foot-icon>a').hover(function(){
+            $(this).children('.icon-normal').toggleClass('display-none')
+            $(this).children('.icon-hover').toggleClass('display-none')
+
+        })
+    })
+    </script>
+</head>
+<body>
+    <div class="head">
+        <img src="../실습3/실습3이미지/logo.jpg" alt="">
+        <div class="head-menu">
+            <a href="./실습3_메인.html">HOME</a>
+            <a href="./실습3_어바웃.html">ABOUT</a>
+            <a class="select" href="./실습3_ 갤러리.html">GALLERY</a>
+            <a href="./실습3_블로그.html">BLOG</a>
+            <a href="./실습3_콘텍트.html">CONTACT</a>
+        </div>
+    </div>
+    <div class="body-gellerypost">
+       <div>GALLERY POST</div>
+        <img src="실습3이미지/prim-and-proper.jpg" alt="">
+        <div>
+            <div>PRIM AND PROPER</div>
+            <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them. </p>
+            
+        </div>
+    </div>
+    <div class="foot">
+        <div class="box">
+             <div>(C)2023 by Mustacchio_All rights reserved.</div>
+             <div class="foot-icon">
+                <a href="https://twitter.com/home"><img class="icon-normal " src="../실습3/실습3아이콘/icon-twitter.jpg">
+                <img class="icon-hover  display-none" src="../실습3/실습3아이콘/icon-twitter-hover.jpg"></a>
+
+                <a href="https://www.facebook.com/"><img class="icon-normal" src="../실습3/실습3아이콘/icon-facebook.jpg">
+                <img class="icon-hover display-none" src="../실습3/실습3아이콘/icon-facebook-hover.jpg"></a>
+
+                <a href="https://www.google.co.kr/"><img class="icon-normal" src="../실습3/실습3아이콘/icon-googleplus.jpg">
+                <img class="icon-hover display-none" src="../실습3/실습3아이콘/icon-googleplus-hover.jpg"></a>
+
+                <a href="https://www.pinterest.co.kr/"><img class="icon-normal" src="../실습3/실습3아이콘/icon-pinterest.jpg">
+                <img class="icon-hover display-none" src="../실습3/실습3아이콘/icon-pinterest-hover.jpg"></a>
+
+            </div>
+            </div>
+        
+    </div>
+</body>
+</html>

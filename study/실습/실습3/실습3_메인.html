@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실습3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="실습3.css">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/77e3f1eeb9.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    
+    <script src="실습3.js"></script>
+    <script>
+    $(function(){
+        $('.head-menu>a').click(function(){
+            $('.head-menu>a').css('color','black')
+            $(this).css('color','#0ba39c')
+        })
+        $('.foot-icon>a').hover(function(){
+            $(this).children('.icon-normal').toggleClass('display-none')
+            $(this).children('.icon-hover').toggleClass('display-none')
+
+        })
+    })
+    </script>
+</head>
+<body>
+    <div class="head">
+        <img src="../실습3/실습3이미지/logo.jpg" alt="">
+        <div class="head-menu">
+            <a class="select" href="./실습3_메인.html">HOME</a>
+            <a href="./실습3_어바웃.html">ABOUT</a>
+            <a href="./실습3_ 갤러리.html">GALLERY</a>
+            <a href="./실습3_블로그.html">BLOG</a>
+            <a href="./실습3_콘텍트.html">CONTACT</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="cont1">
+            <div class="cont1-text">
+                <div>THE BEACON ALL MANKIND</div>
+                <div class="cont1-blbox">
+                    <div>Our website templates are created with</div>
+                    <div>inspiration, checked for quality originaity</div>
+                    <div>and meticulously sliced and coded</div>
+                </div>
+                <div>READ MORE</div>
+            </div>
+            <img src="../실습3/실습3이미지/the-beacon.jpg" alt="">
+        </div>
+        <div class="cont2 box">
+            <a href="./실습3_ 갤러리.html">
+                <img src="../실습3/실습3이미지/the-actor.jpg" alt="">
+                <div>THE ACTOR</div>
+            </a>
+            <a href="./실습3_ 갤러리.html">
+                <img src="../실습3/실습3이미지/the-father.jpg" alt="">
+                <div>THE FATHER</div>
+            </a>
+            <a href="./실습3_ 갤러리.html">
+                <img src="../실습3/실습3이미지/the-nerd.jpg" alt="">
+                <div>THE NERD</div>
+            </a>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="box">
+             <div>(C)2023 by Mustacchio_All rights reserved.</div>
+             <div class="foot-icon">
+                <a href="https://twitter.com/home"><img class="icon-normal " src="../실습3/실습3아이콘/icon-twitter.jpg">
+                <img class="icon-hover  display-none" src="../실습3/실습3아이콘/icon-twitter-hover.jpg"></a>
+
+                <a href="https://www.facebook.com/"><img class="icon-normal" src="../실습3/실습3아이콘/icon-facebook.jpg">
+                <img class="icon-hover display-none" src="../실습3/실습3아이콘/icon-facebook-hover.jpg"></a>
+
+                <a href="https://www.google.co.kr/"><img class="icon-normal" src="../실습3/실습3아이콘/icon-googleplus.jpg">
+                <img class="icon-hover display-none" src="../실습3/실습3아이콘/icon-googleplus-hover.jpg"></a>
+
+                <a href="https://www.pinterest.co.kr/"><img class="icon-normal" src="../실습3/실습3아이콘/icon-pinterest.jpg">
+                <img class="icon-hover display-none" src="../실습3/실습3아이콘/icon-pinterest-hover.jpg"></a>
+
+            </div>
+            </div>
+        
+    </div>
+</body>
+</html>

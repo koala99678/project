@@ -1,0 +1,391 @@
+@charset 'utf-8';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+	font-family: 'poller_oneregular';
+	src: url('./pollerone/pollerone-webfont.eot');
+	src: url('./pollerone/pollerone-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('./pollerone/pollerone-webfont.woff') format('woff'),
+		 url('./pollerone/pollerone-webfont.ttf') format('truetype'),
+		 url('./pollerone/pollerone-webfont.svg#poller_oneregular') format('svg');
+}
+@font-face {
+	font-family: 'leckerli_oneregular';
+	src: url('./leckerlione/');
+	src: url('./leckerlione/?#iefix') format('embedded-opentype'),
+		 url('./leckerlione/leckerlione-regular-webfont.woff') format('woff'),
+		 url('./leckerlione/leckerlione-regular-webfont.ttf') format('truetype'),
+		 url('./leckerlione/leckerlione-regular-webfont.svg#leckerli_oneregular') format('svg');
+}
+/* 전체 css */
+.box{
+    margin: 0 250px;
+    width: calc(100% - 500px);
+}
+/* 헤더관련 css */
+.head{
+    height: 258px;
+}
+.head>img{
+    margin: 36px calc(50% - 170px) 56px;
+}
+.head-menu{
+    margin: 0 calc(50% - 226px);
+}
+.head-menu::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.head-menu>a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-right:37px;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.head-menu>a:hover{
+    color: #0ba39c;
+}
+.head-menu>a:last-of-type{
+    margin-right: 0;
+}
+/* 메인관련 css */
+.cont1{
+    height: 554px;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+}
+.cont1>img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cont1-text{
+    position: absolute;
+    top: calc(50% - 146px);
+    left: 50%;
+    z-index: 10;
+}
+.cont1-text>div:first-of-type{
+    width: 431px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    background-color: white;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-family: 'poller_oneregular';
+}
+.cont1-blbox>div{
+    width: 408px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 13px;
+}
+.cont1-text>div:last-of-type{
+    width: 152px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    color: white;
+    background-color: #0ba39c;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.cont2{
+    height: 506px;
+    margin: 38px calc(50% - 452.5px);
+    display: flex;
+}
+.cont2>a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'poller_oneregular';
+    font-size: 20px;
+}
+.cont2>a:nth-of-type(2){
+    margin: 0 20px;
+}
+.cont2>a>img{
+    border: 3px solid black;
+}
+
+
+/* 어바웃 관련 css */
+.body-about{
+    width: 555px;
+    margin:  0 calc(50% - 277.5px);
+    
+}
+.body-about>div{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 33px;
+}
+.body-about>div>div{
+    font-weight: 400;
+}
+.body-about>div>div>span{
+    color: #898989;
+    text-decoration: underline;
+}
+.body-about>div:first-of-type{
+    font-family: 'poller_oneregular';
+    color: white;
+    width: 555px;
+    height: 54px;
+    background-color: black;
+    line-height: 54px;
+    font-size: 35px;
+}
+.body-about>img{
+    border: black 2px solid;
+    margin: 14px 0 37px -32.5px;
+}
+.body-about>div:last-of-type{
+    margin-bottom: 80px;
+}
+/* 갤러리 관련 css */
+.body-gellery{
+    width: 930px;
+    margin: 0 calc(50% - 480px) 45px;
+}
+.body-gellery>div{
+    text-align: center;
+    font-family: 'poller_oneregular';
+    color: white;
+    width: 251px;
+    height: 54px;
+    background-color: black;
+    line-height: 54px;
+    font-size: 35px;
+    margin: 0 calc(50% - 125.5px) 24px;
+}
+.body-gellery img{
+    margin: 5px;
+}
+/* 갤러리 포스트 css */
+.body-gellerypost>div:first-of-type{
+    text-align: center;
+    font-family: 'poller_oneregular';
+    color: white;
+    width: 550px;
+    height: 54px;
+    background-color: black;
+    line-height: 54px;
+    font-size: 35px;
+    margin: 0 calc(50% - 275px) 24px;
+}
+.body-gellerypost>img{
+    border: 2px solid;
+    margin-left: calc(50% - 308.4965px);
+    margin-bottom: 52px;
+}
+.body-gellerypost>div{
+    width: 550px;
+    margin: 0 calc(50% - 250px - 20px) 30px;
+    text-align: center;
+}
+.body-gellerypost>div>div{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    width: 320px;
+    height: 35px;
+    background-color: black;
+    line-height: 35px;
+    font-size: 25px;
+    margin: 0 calc(50% - 160px) 24px;
+    font-weight: 700;
+}
+.body-gellerypost>div>p{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+.body-gellerypost>div>p:last-of-type{
+    margin-bottom: 200px;
+}
+/* 블로그 관련 css */
+.body-blog>div:first-of-type{
+    text-align: center;
+    font-family: 'poller_oneregular';
+    color: white;
+    width: 172px;
+    height: 54px;
+    background-color: black;
+    line-height: 54px;
+    font-size: 35px;
+    margin: 0 calc(50% - 86px) 24px;
+}
+.body-blog>div>a{
+    text-decoration: none;
+    color: black;
+    width: 940px;
+    border: 1px solid black;
+    display:flex;
+    margin: 0 calc(50% - 490px) 15px;
+}
+.body-blog>div>a:last-of-type{
+    margin-bottom: 60px;
+}
+.body-blog>div>a>img{
+    float: left;
+}
+.body-blog>div>a>div{
+    width: calc(940px - 376px);
+    float: right;
+    text-align: center;
+}
+.body-blog>div>a>div>div{
+    width: 165px;
+    height: 30px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    margin: 0 calc(50% - (165px / 2));
+}
+.body-blog>div>a>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 482px;
+    margin-left: calc(50% - 241px);
+}
+.body-blog>div>a>div>p:first-of-type{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: calc(50% - 225px);
+}
+/* 블로그 포스트 CSS */
+.body-blogpost>div:first-of-type{
+    text-align: center;
+    font-family: 'poller_oneregular';
+    color: white;
+    width: 470px;
+    height: 54px;
+    background-color: black;
+    line-height: 54px;
+    font-size: 35px;
+    margin: 0 calc(50% - 235px) 24px;
+}
+.body-blogpost>img{
+    border: 2px solid;
+    margin-left: calc(50% - 490px);
+    margin-bottom: 52px;
+}
+.body-blogpost>div{
+    width: 550px;
+    margin: 0 calc(50% - 250px - 30px);
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+.body-blogpost>div>p{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+.body-blogpost>div>p:first-of-type{
+    margin-top: 40px;
+}
+.body-blogpost>div>p:last-of-type{
+    margin-bottom: 200px;
+}
+/* 콘텍트 관련 CSS */
+.body-conttact{
+    height: 1060px;
+}
+.body-conttact>div:first-of-type{
+    width: 516px;
+    height: 54px;
+    text-align: center;
+    font-family: 'poller_oneregular';
+    color: white;
+    background-color: black;
+    line-height: 54px;
+    font-size: 35px;
+    margin: 0 calc(50% - 258px) 24px;
+}
+.body-conttact>div{
+    width: 620px;
+    margin-left: calc(50% - 310px);
+}
+.body-conttact>div>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 37px;
+}
+.body-conttact>div>p:last-of-type{
+    height: 177px;
+}
+.body-conttact>div:last-of-type{
+    width: 101px;
+    height: 59px;
+    margin: 0 calc(50% - 50.5px);
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    line-height: 59px;
+}
+/* 푸터관련 css */
+.foot{
+    height: 122px;
+    background-color: #252525;
+}
+.foot>.box>div:first-of-type{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    font-size: 15px;
+    margin-top: calc(61px - 7.5px);
+}
+.foot-icon{
+    float: right;
+    margin-top: calc(61px - 22px);
+}
+.foot-icon>a{
+    margin-left: 20px;
+}
+/* .foot-icon>a:last-of-type{
+    margin-left: 0;
+} */
+
+
+
+.head-menu>.select{
+    color: #0ba39c;
+}
+.display-none{
+    display: none;
+}
