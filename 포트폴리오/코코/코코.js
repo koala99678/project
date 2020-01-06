@@ -23,21 +23,59 @@ $(function(){
     $('.navigation1').removeClass('display-none')
    })
    var swiper = new Swiper('#cont3 .swiper-container', {
-    cssMode: true,
     navigation: {
       nextEl: '#cont3 .swiper-button-next',
       prevEl: '#cont3 .swiper-button-prev',
     },
     pagination: {
-      el: '#cont3 .swiper-pagination'
-    },
-    mousewheel: true,
-    keyboard: true,
-  });
-  var swiper = new Swiper('#cont5 .swiper-container', {
-    pagination: {
-      el: '#cont5 .swiper-pagination',
-      clickable: true,
+      el: '#cont3 .swiper-pagination',
+      clickable: true
     },
   });
+  
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    navigation: {
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+  var galleryThumbs2 = new Swiper('.gallery-thumbs2', {
+    direction: 'vertical',
+      slidesPerView: 3,
+      spaceBetween: 30,
+      mousewheel: true,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      pagination : { // 페이징 설정
+        el : '.swiper-pagination',
+        clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+      },
+      navigation: {
+      nextEl: '.cont5-navl .swiper-button-next',
+      prevEl: '.cont5-navl .swiper-button-prev',
+    },
+        
+    });
+  var galleryTop2 = new Swiper('.gallery-top2', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.gallery-top2 .swiper-button-next',
+      prevEl: '.gallery-top2 .swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs2
+    }
+  });
+        // galleryTop2.controller.control = galleryThumbs2;
+        // galleryThumbs2.controller.control = galleryTop2;
+
 })

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>개인페이지</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">  
+    <link rel="stylesheet" href="개인페이지.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="개인페이지.js"></script>
+    <script>
+    $(function(){
+      $('.main-menu>span').hover(function(){
+        $(this).children('div').animate({
+          width:'100%'
+        })
+      }, function(){
+        $(this).children('div').animate({
+          width:'0%'
+        },0)
+      })
+      $('.all-menu-btn').click(function(){
+        $('.all-menu').removeClass('display-none')
+      })
+      $('.all-menu .fa-times').click(function(){
+        $('.all-menu').addClass('display-none')
+        $('#element').off('scroll touchmove mousewheel');
+      })
+      $('.all-menu').on('scroll touchmove mousewheel', function(event) {
+        console.log('sgdsg')
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
+        $('.main-about').hover(function(){
+        $(this).children('.main-about-bg').animate({
+          width:'100%'
+        })
+      }, function(){
+        $(this).children('.main-about-bg').animate({
+          width:'0%'
+        },0)
+      })
+    })
+    </script>
+</head>
+<body  data-spy="scroll" data-target="#myScrollspy" data-offset="1" -ms-overflow-style: none;>
+    <div class="body-tag">
+    <div class="head">
+        <div class="head-a">
+            <div>
+              <div class="head-a-box">
+                <img class="" src="/개인페이지/이미지/로고.png" alt="">
+                <div class="main-menu">
+                  <span class="fl">
+                    <a class="main-menu-maggin" href="">about</a>
+                    <div class="main-menu-select"></div>
+                  </span>
+                  <span class="fl">
+                    <a href="">commission</a>
+                    <div class="main-menu-select"></div>
+                  </span>
+                  <span class="fl">
+                    <a href="">more</a>
+                    <div class="main-menu-select"></div>
+                  </span>
+                  <span class="fl all-menu-btn">
+                    <a href="#">all</a>
+                    <div class="main-menu-select"></div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="head-line"></div>
+        </div>
+        <div class="head-b"></div>
+        <div class="all-menu display-none">
+          <div class="all-menu-box">
+            <div class="fr">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <div class="all-menu-bg"></div>
+        </div>
+    </div>
+    <div></div>
+    <div class="container-fluid ">
+        <div class="row">
+          <nav class="" id="myScrollspy">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#section1"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section2"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section3"></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="main-body">
+            <div id="section1" class="">    
+            <div class="main-about">
+              <div></div>
+              <div class="main-about-bg"></div>
+            </div>
+            </div>
+            <div id="section2" class=""> 
+
+            </div>        
+            <div id="section3" class="">         
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    <div class="foot"></div>
+    </div>
+</body>
+</html>

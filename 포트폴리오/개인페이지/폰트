@@ -1,0 +1,17 @@
+
+//어비 마이센치
+@font-face { font-family: 'UhBeemysen'; 
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+ font-weight: normal; font-style: normal; }
+ 
+
+ //어비 푸딩체
+@font-face { font-family: 'UhBeepuding';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeepuding.woff') format('woff');
+ font-weight: normal; font-style: normal; }
+
+
+//어비 나현체
+@font-face { font-family: 'UhbeeNaHyun'; 
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhbeeNaHyun.woff') format('woff');
+ font-weight: normal; font-style: normal; }
