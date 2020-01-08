@@ -34,4 +34,11 @@ $(function(){
           width:'0%'
         },0)
       })
+
+      $('.main-about').hover(function(){
+        $('.main-about-tast').css('transform','scale(1.5)')
+      },function(){
+        $('.main-about-tast').css('transform','scale(1.0)')
+      })
+      
 })
