@@ -25,6 +25,17 @@
   font-size: 18px;
   font-family: 'UhBeepuding';
 }
+a:hover{
+  cursor: url(/개인페이지/이미지/커서클릭.png), default;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+}
 .body-tag{
     margin: 0 auto;
     width: 1600px;
@@ -120,11 +131,37 @@ body::-webkit-scrollbar {
   z-index: 100;
   width: 100px;
   height: 100px;
-  background-color: #fd7579;
   position: fixed;
-  bottom: 50px;
-  right: 0;
+  bottom: 80px;
+  right: 30px;
   display: none;
+  text-align: center;
+  line-height: 100px;
+  opacity: 0.5;
+  transition: all ease 1s;
+}
+.top>i{
+  font-size: 30px;
+}
+.top:hover{
+  opacity: 1.0;
+}
+.tock{
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 300px;
+  right: 30px;
+  display: none;
+  text-align: center;
+  line-height: 100px;
+  opacity: 0.5;
+  transition: all ease 1s;
+
+}
+.tock:hover{
+  opacity: 1.0;
 }
 /* 바디관련 */
 .body{
@@ -149,15 +186,16 @@ ul.nav-pills {
   z-index: 30;
   opacity: 0.4;
   background-color: #bcbcbc;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 25px;
-  margin: 5px;
+  margin: 15px;
   padding: 0;
 }
 .nav-item .active{
   opacity: 1.0;
   background-color: #fd7579;
+  transition: all ease 1s;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
   background-color: #fd7579;
@@ -188,6 +226,7 @@ ul.nav-pills {
 .main-more{
   width: 100%;
   height: 800px;
+  overflow: hidden;
 }
 /* 테스트 */
 .main-about>div{
@@ -291,7 +330,6 @@ ul.nav-pills {
   font-size: 30px;
   font-weight: 400;
 }
-
-a{
-  text-decoration: none;
+.pink{
+  color: #fd7579;
 }

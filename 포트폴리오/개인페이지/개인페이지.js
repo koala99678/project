@@ -35,7 +35,6 @@ $(function(){
 
       })
       $('.all-menu').on('scroll touchmove mousewheel', function(event) {
-        console.log('sgdsg')
           event.preventDefault();
           event.stopPropagation();
           return false;
@@ -66,17 +65,29 @@ $(function(){
       } );
       $( '.top' ).click( function() {
         $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+        $('#section3').addClass('display-none')
+        $('.nav-last').addClass('display-none')
         return false;
+      } );
+
+      $( window ).scroll( function() {
+        if ( $( this ).scrollTop() > 671 ) {
+          $( '.tock' ).fadeIn();
+        } else {
+          $( '.tock' ).fadeOut();
+        }
       } );
       $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
     
       $('.maindown').hover(function(){
         const maindown =  document.querySelector('.maindown')
-        maindown.classList.add('animated', 'bounce')
+        maindown.classList.add('animated', 'bounce','infinite')
+      },function(){
+        maindown.classList.add('animated', 'bounce','infinite')
       })
       $('.maindown').click(function(){
         $('#section3').removeClass('display-none')
-        $('.nav-item').removeClass('display-none')
+        $('.nav-last').removeClass('display-none')
         var swiper = new Swiper('.swiper-container', {
         slidesPerView: 10,
         spaceBetween: 30,
@@ -98,5 +109,13 @@ $(function(){
         return false;
       } );
 
-     
+      if($('.nav-link').hasClass('.active')){
+        $(this).css('transform','scale(1.3)')
+      }
+      $( window ).scroll( function() {
+        if ( $( this ).scrollTop() < 821 ) {
+          $('#section3').addClass('display-none')
+          $('.nav-last').addClass('display-none')
+        }
+      } );
 })
