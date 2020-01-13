@@ -158,7 +158,6 @@ body::-webkit-scrollbar {
   line-height: 100px;
   opacity: 0.5;
   transition: all ease 1s;
-
 }
 .tock:hover{
   opacity: 1.0;
