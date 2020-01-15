@@ -93,6 +93,35 @@ $(function(){
         var maindown =  document.querySelector('.maindown')
         maindown.classList.remove('animated', 'bounce','infinite')
       })
+      $(window).scroll(function (){
+        if($( this ).scrollTop() > 920){
+          var maindown =  document.querySelector('.maindown')
+              maindown.classList.add('animated', 'bounce','infinite')
+        }
+        if($( this ).scrollTop() > 1048){
+          var maindown =  document.querySelector('.maindown')
+              maindown.classList.remove('animated', 'bounce','infinite')
+              $('#section3').removeClass('display-none')
+              $('.nav-last').removeClass('display-none')
+              var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 'auto',
+              spaceBetween: 30,
+              centeredSlides: true,
+              parallax: true,
+              speed: 300,
+              mousewheel: {
+                sensitivity:5000,
+                // forceToAxis:true,
+              },
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            });
+            // $( 'html, body' ).animate( { scrollTop : 1721 }, 400 );
+            // return false;
+          }
+      })
       $('.maindown').click(function(){
         $('#section3').removeClass('display-none')
         $('.nav-last').removeClass('display-none')
