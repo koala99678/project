@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
   width: 0px;
   background-color: transparent;
 }
-.main-menu a:hover{
+.link-box a:hover{
   color: #58585b;
 }
 .head-line{
@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100vh;
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .all-menu-box{
   position: absolute;
@@ -215,7 +215,7 @@ ul.nav-pills {
 .main-about{
   width: 100%;
   height: 500px;
-  background-color: tomato;
+  background-color: #58585b;
   position: relative;
   top: 0;
   left: 0;
@@ -249,7 +249,7 @@ ul.nav-pills {
   top: 0;
   left: 0;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .main-about-bgbox{
   width: 100%;
@@ -287,6 +287,9 @@ ul.nav-pills {
   line-height: 55px;
   margin-left: 20px;
 }
+.about-tittel{
+  margin-top: 160px;
+}
 .main-commission{
   width: 100%;
   height: 900px;
@@ -300,13 +303,13 @@ ul.nav-pills {
   font-size: 50px;
   padding: 50px;
   margin-bottom: 50px;
-  cursor: pointer;
 }
 .main-more{
   margin-top: 150px;
   position: relative;
 }
 .main-more .swiper-container{
+  width: 1600px;
   position: absolute;
   bottom: 0;
 }
@@ -314,6 +317,14 @@ ul.nav-pills {
   height: 300px;
   width: 300px;
   background-color: #fd7579;
+  opacity: 0.6;
+}
+.swiper-slide.swiper-slide-active{
+  transition: all ease 1s;
+  background-color: aqua;
+  transform: scale(1.1);
+  margin-bottom: 50px;
+  opacity: 1.0;
 }
 /* 전체 */
 .fl{
@@ -325,10 +336,27 @@ ul.nav-pills {
 .display-none{
   display:none;
 }
-.link-text{
-  font-size: 30px;
-  font-weight: 400;
-}
 .pink{
   color: #fd7579;
+}
+.link-text{
+  font-family: 'UhBeemysen';
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 13px;
+}
+.link-tittel{
+  font-family: 'UhBeemysen';
+  font-size: 50px;
+  text-align: center;
+}
+.link-move{
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+.link-arrow{
+  font-family: 'UhBeemysen';
+  font-size: 50px;
+  margin-left: 20px;
 }

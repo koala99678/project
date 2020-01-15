@@ -78,18 +78,26 @@ $(function(){
         }
       } );
       $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
-    
+      $('#section2 .link-box a').hover(function(){
+        var linkbox2 =  document.querySelector('#section2 .link-box a')
+        linkbox2.classList.add('animated', 'pulse','infinite')
+      },function(){
+        var linkbox2 =  document.querySelector('#section2 .link-box a')
+        linkbox2.classList.remove('animated', 'pulse','infinite')
+      })
+      $('[data-toggle="tooltip"]').tooltip();
       $('.maindown').hover(function(){
-        const maindown =  document.querySelector('.maindown')
+        var maindown =  document.querySelector('.maindown')
         maindown.classList.add('animated', 'bounce','infinite')
       },function(){
-        maindown.classList.add('animated', 'bounce','infinite')
+        var maindown =  document.querySelector('.maindown')
+        maindown.classList.remove('animated', 'bounce','infinite')
       })
       $('.maindown').click(function(){
         $('#section3').removeClass('display-none')
         $('.nav-last').removeClass('display-none')
         var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 10,
+        slidesPerView: 'auto',
         spaceBetween: 30,
         centeredSlides: true,
         parallax: true,
