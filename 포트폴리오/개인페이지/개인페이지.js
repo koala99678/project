@@ -86,13 +86,13 @@ $(function(){
         linkbox2.classList.remove('animated', 'pulse','infinite')
       })
       $('[data-toggle="tooltip"]').tooltip();
-      $('.maindown').hover(function(){
-        var maindown =  document.querySelector('.maindown')
-        maindown.classList.add('animated', 'bounce','infinite')
-      },function(){
-        var maindown =  document.querySelector('.maindown')
-        maindown.classList.remove('animated', 'bounce','infinite')
-      })
+      // $('.maindown').hover(function(){
+      //   var maindown =  document.querySelector('.maindown')
+      //   maindown.classList.add('animated', 'bounce','infinite')
+      // },function(){
+      //   var maindown =  document.querySelector('.maindown')
+      //   maindown.classList.remove('animated', 'bounce','infinite')
+      // })
       $(window).scroll(function (){
         if($( this ).scrollTop() > 920){
           var maindown =  document.querySelector('.maindown')
@@ -122,6 +122,7 @@ $(function(){
             // return false;
           }
       })
+    
       $('.maindown').click(function(){
         $('#section3').removeClass('display-none')
         $('.nav-last').removeClass('display-none')
@@ -155,4 +156,6 @@ $(function(){
           $('.nav-last').addClass('display-none')
         }
       } );
+
+      
 })
