@@ -17,7 +17,7 @@
    font-weight: normal; font-style: normal; }
   
 
-   html{cursor: url(/개인페이지/이미지/커서.png), default;}
+   html{cursor: url(../개인페이지/이미지/커서.png), default;}
 *{
 	padding: 0;
 	margin: 0;
@@ -26,7 +26,7 @@
   font-family: 'UhBeepuding';
 }
 a:hover{
-  cursor: url(/개인페이지/이미지/커서클릭.png), default;
+  cursor: url(../개인페이지/이미지/커서클릭.png), default;
 }
 a{
   text-decoration: none;
