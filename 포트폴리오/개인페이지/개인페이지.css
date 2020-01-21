@@ -130,6 +130,7 @@ color: white;
 font-size: 30px;
 margin-top: 15vh;
 transition: all ease-out 1s;
+margin-right: 250px;
 }
 .all-menu .fa-times:hover{
   transform: rotate(720deg);
