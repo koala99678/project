@@ -156,6 +156,4 @@ $(function(){
           $('.nav-last').addClass('display-none')
         }
       } );
-
-      
 })
