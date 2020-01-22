@@ -77,7 +77,7 @@ $(function(){
           $( '.tock' ).fadeOut();
         }
       } );
-      $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
+      // $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
       $('#section2 .link-box a').hover(function(){
         var linkbox2 =  document.querySelector('#section2 .link-box a')
         linkbox2.classList.add('animated', 'pulse','infinite')
