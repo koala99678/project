@@ -53,4 +53,9 @@ window.onload = function () {
         var linkbox2 =  document.querySelector('.aboutnavlink2')
         linkbox2.classList.remove('animated', 'pulse','infinite')
       })
+
+      $(".aboutnavlink1").click(function(event){   
+             event.preventDefault();         
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+            });
 }
