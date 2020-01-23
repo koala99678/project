@@ -15,12 +15,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="/js/swiper.js"></script>
     <script src="개인페이지.js"></script>
-    <script>
-    $(function(){
-      
-    })
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 400, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
     </script>
 </head>
 <body  data-spy="scroll" data-target="#myScrollspy" data-offset="1" -ms-overflow-style: none;>
@@ -77,7 +117,7 @@
           <nav class="" id="myScrollspy">
             <ul class="nav nav-pills flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#about1"></a>
+                <a class="nav-link active" href="#about1,#about0"></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about2"></a>
@@ -88,13 +128,14 @@
             </ul>
           </nav>
           <div class="main-body">
-            <div id="about1" class="">    
+            <div id="about0"></div>
+            <div id="about1" class="box">    
             
             </div>
-            <div id="about2" class=""> 
+            <div id="about2" class="box"> 
     
             </div>        
-            <div id="about3" class="">
+            <div id="about3" class="box">
               
           </div>
         </div>

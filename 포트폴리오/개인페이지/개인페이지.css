@@ -339,11 +339,33 @@ transform: scale(1.1);
 margin-bottom: 50px;
 opacity: 1.0;
 }
+#section3 .swiper-slide a{
+  width:300px;
+  height:300px;
+  display: block;
+}
 /* 어바웃 바디 */
 .pwbox{
   width: 100%;
   height: 100vh;
   background-color: black;
+}
+#about0{
+  width: 100%;
+  height: 150px;
+}
+.box{
+  width: 100%;
+  height: 100vh;
+}
+.box:nth-of-type(2){
+  background-color: black;
+}
+.box:nth-of-type(3){
+  background-color: #58585b;
+}
+.box:nth-of-type(4){
+  background-color: #bcbcbc;
 }
 /* 커미션 바디 */
 .commission-popup{
@@ -676,7 +698,14 @@ transform: scale(1.1);
 margin-bottom: 50px;
 opacity: 1.0;
 }
+#section3 .swiper-slide a{
+  width:300px;
+  height:300px;
+  display: block;
 }
+
+}
+/* 모바일 버전 끝 */
 /* 전체 */
 .fl{
   float: left;
