@@ -358,15 +358,6 @@ opacity: 1.0;
   width: 100%;
   height: 100vh;
 }
-.box:nth-of-type(2){
-  background-color: black;
-}
-.box:nth-of-type(3){
-  background-color: #58585b;
-}
-.box:nth-of-type(4){
-  background-color: #bcbcbc;
-}
 /* 커미션 바디 */
 .commission-popup{
   width: 100%;
