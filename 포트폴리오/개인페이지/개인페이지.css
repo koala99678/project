@@ -345,26 +345,43 @@ opacity: 1.0;
   display: block;
 }
 /* 어바웃 바디 */
+.about-body{
+  width: 100%;
+}
 .pwbox{
   width: 100%;
   height: 100vh;
   background-color: black;
 }
-#about0{
-  width: 100%;
-  height: 150px;
-}
 .box{
   width: 100%;
-  height: 100vh;
+  height:100vh;
 }
-#about1 a{
-  display: block;
+.box:first-of-type{
+  padding-top: 160px;
 }
-#about1 a:first-of-type{
+#about1>div{
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #fd7579;
+}
+#about1>div>a{
   font-family: 'UhBeemysen';
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+}
+#about1>div>a:hover{
   font-weight: 500;
+  opacity: 0.8;
+}
+#about1>div>a:first-of-type{
+  padding-top: 50px;
   margin-top: 150px;
+  font-weight: 600;
+  font-size: 40px;
 }
 /* 커미션 바디 */
 .commission-popup{
