@@ -36,6 +36,8 @@
         var tinyy=new Array();
         var tinyv=new Array();
         window.onload=function() { 
+            bgbox.onmousemove=mouse;
+            // 적용할 태그의 ID.이벤트=선언
             console.log(document.getElementById)
             if (document.getElementById) {
                 var i, rats, rlef, rdow;
@@ -127,7 +129,7 @@
           }
           else tiny[i].style.visibility="hidden";
         }
-        document.onmousemove=mouse;
+        
         function mouse(e) {
           set_scroll();
           y=(e)?e.pageY:event.y+sdown;
@@ -179,6 +181,6 @@
         </script>
 </head>
 <body>
-    <div class="bgbox"></div>
+    <div class="bgbox" id="bgbox"></div>
 </body>
 </html>
