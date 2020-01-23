@@ -364,6 +364,7 @@ opacity: 1.0;
 #about1 a:first-of-type{
   font-family: 'UhBeemysen';
   font-weight: 500;
+  margin-top: 150px;
 }
 /* 커미션 바디 */
 .commission-popup{
