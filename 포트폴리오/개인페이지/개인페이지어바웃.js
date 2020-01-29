@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function () {
     var elm = ".box";
     $(elm).each(function (index) {
         // 개별적으로 Wheel 이벤트 적용
@@ -21,6 +21,12 @@ window.onload = function () {
                         moveTop = $(elmSelecter).next().offset().top;
                     }catch(e){}
                 }
+                    if(elmSelecter=1){
+                        $('.about2black').animate({
+                            opacity: '1'
+                        },1000)
+                        
+                    }
             // 마우스휠을 아래에서 위로
             } else {
                 if ($(elmSelecter).prev() != undefined) {
@@ -28,6 +34,7 @@ window.onload = function () {
                         moveTop = $(elmSelecter).prev().offset().top;
                     }catch(e){}
                 }
+                
             }
              
             // 화면 이동 0.8초(800)
@@ -39,23 +46,11 @@ window.onload = function () {
             });
         });
     });
-    $('.aboutnavlink1').hover(function(){
-        var linkbox2 =  document.querySelector('.aboutnavlink1')
-        linkbox2.classList.add('animated', 'pulse','infinite')
-      },function(){
-        var linkbox2 =  document.querySelector('.aboutnavlink1')
-        linkbox2.classList.remove('animated', 'pulse','infinite')
-      })
-      $('.aboutnavlink2').hover(function(){
-        var linkbox2 =  document.querySelector('.aboutnavlink2')
-        linkbox2.classList.add('animated', 'pulse','infinite')
-      },function(){
-        var linkbox2 =  document.querySelector('.aboutnavlink2')
-        linkbox2.classList.remove('animated', 'pulse','infinite')
-      })
-
-      $(".aboutnavlink1").click(function(event){   
-             event.preventDefault();         
-            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-            });
-}
+    $( '.aboutnavlink1' ).click( function() {
+        $( 'html, body' ).animate( { scrollTop : 801 }, 400 );
+      } );
+      $( '.aboutnavlink2' ).click( function() {
+        $( 'html, body' ).animate( { scrollTop : 1601 }, 400 );
+      } );
+      
+})

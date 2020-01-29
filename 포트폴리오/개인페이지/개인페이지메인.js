@@ -1,4 +1,13 @@
 $(function(){
+  $('.main-menu>span').hover(function(){
+    $(this).children('div').animate({
+      width:'100%'
+    })
+  }, function(){
+    $(this).children('div').animate({
+      width:'0%'
+    },0)
+  })
       $('#section2 .link-box a').hover(function(){
         var linkbox2 =  document.querySelector('#section2 .link-box a')
         linkbox2.classList.add('animated', 'pulse','infinite')
@@ -25,15 +34,12 @@ $(function(){
               speed: 300,
               mousewheel: {
                 sensitivity:5000,
-                // forceToAxis:true,
               },
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
               },
             });
-            // $( 'html, body' ).animate( { scrollTop : 1721 }, 400 );
-            // return false;
           }
       })
 
@@ -48,7 +54,6 @@ $(function(){
         speed: 300,
         mousewheel: {
           sensitivity:5000,
-          // forceToAxis:true,
         },
         pagination: {
           el: '.swiper-pagination',

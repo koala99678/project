@@ -44,9 +44,10 @@
       var tinyy=new Array();
       var tinyv=new Array();
       window.onload=function() { 
+        // window.onload=function 한번밖에 적용이 안됨
+        // 그래서 보통 $(document).ready(function () {})을 사용함
           bgbox.onmousemove=mouse;
           // 적용할 태그의 ID.이벤트=선언
-          console.log(document.getElementById)
           if (document.getElementById) {
               var i, rats, rlef, rdow;
               for (var i=0; i<sparkles; i++) {
@@ -256,15 +257,28 @@
             <div id="about1" class="box">
               <div id="bgbox">    
               <a  href="">about</a>
-              <a class="aboutnavlink1" href="#">What I'm doing right now</a>
-              <a class="aboutnavlink2" href="#">Where am I standing right now?</a>
+              <a class="aboutnavlink1" href="#">You want to find out who I am?</a>
+              <a class="aboutnavlink2" href="#">Why did my life become like this</a>
             </div>
             </div>
             <div id="about2" class="box"> 
-              <div class="bgbox"></div>
-            </div>        
+              <div class="about2black">
+                  <div class="">You want to find out who I am?</div>
+                <div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+            </div> 
+          </div>       
             <div id="about3" class="box">
-              
+              <div class="">Why did my life become like this?</div>
+              <div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>     
           </div>
         </div>
       </div>

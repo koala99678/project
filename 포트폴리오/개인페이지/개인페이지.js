@@ -1,14 +1,5 @@
 $(function(){
       $('.main-menu>span').hover(function(){
-        $(this).children('div').animate({
-          width:'100%'
-        })
-      }, function(){
-        $(this).children('div').animate({
-          width:'0%'
-        },0)
-      })
-      $('.main-menu>span').hover(function(){
         $('.main-menu>span').children('div').css('background-color','transparent')
         $(this).children('div').css('background-color','#bcbcbc')
       })
@@ -68,6 +59,6 @@ $(function(){
       } );
 
       // 현재 스크롤 위치
-      $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
+      // $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
 })
 
