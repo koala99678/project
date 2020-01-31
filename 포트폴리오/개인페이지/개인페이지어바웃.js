@@ -21,12 +21,6 @@ $(document).ready(function () {
                         moveTop = $(elmSelecter).next().offset().top;
                     }catch(e){}
                 }
-                    if(elmSelecter=1){
-                        $('.about2black').animate({
-                            opacity: '1'
-                        },1000)
-                        
-                    }
             // 마우스휠을 아래에서 위로
             } else {
                 if ($(elmSelecter).prev() != undefined) {
@@ -47,10 +41,29 @@ $(document).ready(function () {
         });
     });
     $( '.aboutnavlink1' ).click( function() {
-        $( 'html, body' ).animate( { scrollTop : 801 }, 400 );
+        $( 'html, body' ).animate( { scrollTop : 629 }, 400 );
       } );
       $( '.aboutnavlink2' ).click( function() {
-        $( 'html, body' ).animate( { scrollTop : 1601 }, 400 );
+        $( 'html, body' ).animate( { scrollTop : 1258 }, 400 );
       } );
-      
+
+      $(window).scroll(function(){
+          if($(this).scrollTop()==629){
+            $('.about2black').animate({
+                opacity: '1'
+            })
+          }else if($(this).scrollTop()==0){
+            $('.about2black').animate({
+                opacity: '0'
+            })
+          }
+          else if($(this).scrollTop()==1258){
+            $('.about2black').animate({
+                opacity: '0'
+            })
+          }
+      })
+    // 현재 스크롤 위치
+    //   $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
+      //현재 배우고 있는 단위명 앱프로그래밍
 })

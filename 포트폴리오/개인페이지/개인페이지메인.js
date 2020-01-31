@@ -1,13 +1,4 @@
 $(function(){
-  $('.main-menu>span').hover(function(){
-    $(this).children('div').animate({
-      width:'100%'
-    })
-  }, function(){
-    $(this).children('div').animate({
-      width:'0%'
-    },0)
-  })
       $('#section2 .link-box a').hover(function(){
         var linkbox2 =  document.querySelector('#section2 .link-box a')
         linkbox2.classList.add('animated', 'pulse','infinite')

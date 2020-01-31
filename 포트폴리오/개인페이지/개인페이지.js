@@ -1,7 +1,27 @@
 $(function(){
+  $('.main-menu>span').hover(function(){
+    if(!$(this).children('div').hasClass('selected')){
+      $(this).children('div').animate({
+        width:'100%'
+      })
+    }
+    $('.selectpage').children('div').animate({
+      width:'100%'
+    })
+  }, function(){
+    $('.selectpage').children('div').animate({
+      width:'100%'
+    })
+    if(!$(this).children('div').hasClass('selected')){
+      $(this).children('div').animate({
+        width:'0%'
+      },0)
+    }
+  })
       $('.main-menu>span').hover(function(){
         $('.main-menu>span').children('div').css('background-color','transparent')
         $(this).children('div').css('background-color','#bcbcbc')
+        $('.selectpage').children('div').css('background-color','#bcbcbc')
       })
       $('.all-menu-btn').click(function(){
         $('.all-menu').removeClass('display-none')
