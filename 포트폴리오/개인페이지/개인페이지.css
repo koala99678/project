@@ -413,12 +413,16 @@ opacity: 1.0;
   top: 160px;
   left: 0;
 }
-.about2inbox{
+.about2inbox,.about2inbox2{
   width: 800px;
   height: 300px;
   margin: 0 auto;
-  background-color: white;
   margin-top: 150px;
+  background-color: white;
+}
+.about2inbox2{
+  background-color: black;
+  color: white;
 }
 /* 커미션 바디 */
 .commission-popup{
