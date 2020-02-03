@@ -448,6 +448,40 @@ opacity: 1.0;
   transition: all ease 1s;
   background-color: #fd7579;
 }
+.commission-body-menu{
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  }
+  .commission-body-menubg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.8;
+  }
+  .commission-body-menubox{
+  position: absolute;
+  top: 0;
+  left: calc(50% - 400px);
+  width: 800px;
+  z-index: 10;
+  color: white;
+  }
+  .commission-body-menu .fa-times{
+  color: white;
+  font-size: 30px;
+  margin-top: 15vh;
+  transition: all ease-out 1s;
+  margin-left: 800px;
+  }
+  .commission-body-menu .fa-times:hover{
+    transform: rotate(720deg);
+  }
+
 /* 반응형 메인 */
 
 @media ( max-width: 1080px ) {
