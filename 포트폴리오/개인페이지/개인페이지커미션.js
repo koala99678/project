@@ -14,12 +14,12 @@ $(document).ready(function(){
           event.stopPropagation();
           return false;
         });
-        var swiper2 = new Swiper('.commission-container', {
-            effect: 'flip',
-            grabCursor: true,
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          });
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'flip',
+          grabCursor: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
 })

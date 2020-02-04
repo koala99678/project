@@ -337,7 +337,7 @@ width: 300px;
 background-color: #bcbcbc;
 opacity: 0.6;
 }
-.swiper-slide.swiper-slide-active{
+#section3 .swiper-slide.swiper-slide-active{
 transition: all ease 1s;
 background-color: #58585b;
 transform: scale(1.1);
@@ -481,7 +481,52 @@ opacity: 1.0;
   .commission-body-menu .fa-times:hover{
     transform: rotate(720deg);
   }
-
+  .commissiontitell{
+    height: 80px;
+    width: 430px;
+    position: relative;
+  }
+  .commissiontitell div{
+    font-size: 50px;
+    font-family: 'UhBeemysen';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .commissiontitell>div:nth-of-type(2){
+    font-size: 25px;
+    position: absolute;
+    top: 53%;
+    left: 45%;
+    opacity: 0.6;
+  }
+  .commission-typeselect-in{
+    width: 100%;
+    height: 350px;
+    margin: 30px auto;
+    background-color: #fd7579;
+  }
+  .commission-typeselect-in .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .commission-typeselect-in .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  }
+  .commission-typeselect-in .swiper-slide>a{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .commission-bodyin{
+    padding-top: 160px;
+  }
+  .commission-bodyin>div{
+   background-color: #fd7579;
+   height: 500px;
+   width: 300px;
+  }
 /* 반응형 메인 */
 
 @media ( max-width: 1080px ) {
@@ -783,13 +828,13 @@ width: 300px;
 background-color: #bcbcbc;
 opacity: 0.6;
 }
-.swiper-slide.swiper-slide-active{
-transition: all ease 1s;
-background-color: #58585b;
-transform: scale(1.1);
-margin-bottom: 50px;
-opacity: 1.0;
-}
+#section3 .swiper-slide.swiper-slide-active{
+  transition: all ease 1s;
+  background-color: #58585b;
+  transform: scale(1.1);
+  margin-bottom: 50px;
+  opacity: 1.0;
+  }
 #section3 .swiper-slide a{
   width:300px;
   height:300px;
