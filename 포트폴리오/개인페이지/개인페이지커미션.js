@@ -1,27 +1,4 @@
 $(document).ready(function(){
-      $('.commission-body-menu .fa-times').click(function(){
-        const allmenu2 =  document.querySelector('.commission-body-menu')
-          allmenu2.classList.add('animated', 'bounceOut')
-          allmenu2.addEventListener('animationend', function() {  
-            $('.commission-body-menu').addClass('display-none')
-            allmenu2.classList.remove('animated', 'bounceOut')
-        })
-        
-        $('#element').off('scroll touchmove mousewheel');
-      })
-      $('.commission-body-menu').on('scroll touchmove mousewheel', function(event) {
-          event.preventDefault();
-          event.stopPropagation();
-          return false;
-        });
-        var swiper = new Swiper('.commission-typeselect-swiper', {
-          effect: 'flip',
-          grabCursor: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
         $('[data-toggle="tooltip"]').tooltip();
         
         $('.commission-typemenu a').hover(function(){
@@ -37,10 +14,10 @@ $(document).ready(function(){
           $(this).removeClass('animated pulse infinite')
         })
         $('.commission-typemenu>a').click(function(){
-          if($(this).hasclass('a1')){
-            $('.atype').animate({
-              marginLeft: '500px'
-            })
-          }
+          var index = $(this).attr('data')
+          var margin = -670 * parseInt(index);
+          $('.commission-bodyin-r>div:nth-of-type(2)>div').animate({
+            'margin-left':margin+'px'
+          })
         })
 })

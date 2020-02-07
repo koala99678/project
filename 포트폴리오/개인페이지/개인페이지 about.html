@@ -22,7 +22,7 @@
 
     <script type="text/javascript">
       // <![CDATA[
-      var colour="#000";
+      var colour="#fd7579";
       var sparkles=50;
       /****************************
       *  Tinkerbell Magic Sparkle *
@@ -47,20 +47,24 @@
         // window.onload=function 한번밖에 적용이 안됨
         // 그래서 보통 $(document).ready(function () {})을 사용함
           bgbox.onmousemove=mouse;
+          bgbox2.onmousemove=mouse;
+          bgbox3.onmousemove=mouse;
           // 적용할 태그의 ID.이벤트=선언
           if (document.getElementById) {
               var i, rats, rlef, rdow;
               for (var i=0; i<sparkles; i++) {
-                  var rats=createDiv(3, 3);
+                // 별모양만 색을 바꿔주기위해(height, width)를 (height, width,star)로 수정하고
+                // 별모양이 아닌곳에는 (n, n,0),(n, n,1)로 숫자를 더해줌
+                  var rats=createDiv(3, 3,0);
                   rats.style.visibility="hidden";
                   document.body.appendChild(tiny[i]=rats);
                   starv[i]=0;
                   tinyv[i]=0;
-                  var rats=createDiv(5, 5);
+                  var rats=createDiv(5, 5,0);
                   rats.style.backgroundColor="transparent";
                   rats.style.visibility="hidden";
-                  var rlef=createDiv(1, 5);
-                  var rdow=createDiv(5, 1);
+                  var rlef=createDiv(1, 5,1);
+                  var rdow=createDiv(5, 1,1);
                   rats.appendChild(rlef);
                   rats.appendChild(rdow);
                   rlef.style.top="2px";
@@ -94,6 +98,9 @@
         setTimeout("sparkle()", 40);
       }
       function update_star(i) {
+         // 별가루가 뿌려지는 부분-> 스타일 z-index추가
+         star[i].style.zIndex="100";
+         tiny[i].style.zIndex="100";
         if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
         if (starv[i]) {
           stary[i]+=1+Math.random()*3;
@@ -140,6 +147,18 @@
       }
       
       function mouse(e) {
+        var scrollTop = $('html,body').scrollTop()
+        // 조건값에 따라 colour의 값을 바꿔줌
+        if(scrollTop==0){
+            colour="#000"
+        }
+        else if(scrollTop==629){
+          colour="#000"
+        }else{
+          colour="white"
+        }
+        // 별모양인곳의 색을 바꿔주기 위해 클래스를 추가함
+        $('.star').css('background-color',colour)
         set_scroll();
         y=(e)?e.pageY:event.y+sdown;
         x=(e)?e.pageX:event.x+sleft;
@@ -177,12 +196,15 @@
           shigh=document.body.clientHeight;
         }
       }
-      function createDiv(height, width) {
+      // 별모양만 색을 바꿔주기위해(height, width)를 (height, width,star)로 수정함
+      function createDiv(height, width,star) {
         var div=document.createElement("div");
         div.style.position="absolute";
         div.style.height=height+"px";
         div.style.width=width+"px";
         div.style.overflow="hidden";
+        if(star == 1)
+          div.classList="star"
         div.style.backgroundColor=colour;
         return (div);
       }
@@ -271,7 +293,7 @@
           </div>       
             <div id="about3" class="box">
               <div class="zindex">
-                <div class="about2inbox2">
+                <div  id="bgbox3" class="about2inbox2">
                   <div class="">Why did my life become like this?</div>
                 </div>
               </div>

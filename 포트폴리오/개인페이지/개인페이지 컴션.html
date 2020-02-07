@@ -18,179 +18,15 @@
   <script src="../js/swiper.js"></script>
   <script src="../개인페이지/개인페이지.js"></script>
   <script src="../개인페이지/개인페이지커미션.js"></script>
-  <script type="text/javascript">
-    // <![CDATA[
-    var colour="#000";
-    var sparkles=50;
-    /****************************
-    *  Tinkerbell Magic Sparkle *
-    * (c) 2005 mf2fm web-design *
-    *  http://www.mf2fm.com/rv  *
-    * DON'T EDIT BELOW THIS BOX *
-    ****************************/
-    var x=ox=400;
-    var y=oy=300;
-    var swide=800;
-    var shigh=600;
-    var sleft=sdown=0;
-    var tiny=new Array();
-    var star=new Array();
-    var starv=new Array();
-    var starx=new Array();
-    var stary=new Array();
-    var tinyx=new Array();
-    var tinyy=new Array();
-    var tinyv=new Array();
-    window.onload=function() { 
-      // window.onload=function 한번밖에 적용이 안됨
-      // 그래서 보통 $(document).ready(function () {})을 사용함
-        bgbox.onmousemove=mouse;
-        // 적용할 태그의 ID.이벤트=선언
-        if (document.getElementById) {
-            var i, rats, rlef, rdow;
-            for (var i=0; i<sparkles; i++) {
-                var rats=createDiv(3, 3);
-                rats.style.visibility="hidden";
-                document.body.appendChild(tiny[i]=rats);
-                starv[i]=0;
-                tinyv[i]=0;
-                var rats=createDiv(5, 5);
-                rats.style.backgroundColor="transparent";
-                rats.style.visibility="hidden";
-                var rlef=createDiv(1, 5);
-                var rdow=createDiv(5, 1);
-                rats.appendChild(rlef);
-                rats.appendChild(rdow);
-                rlef.style.top="2px";
-                rlef.style.left="0px";
-                rdow.style.top="0px";
-                rdow.style.left="2px";
-                document.body.appendChild(star[i]=rats);
-            }
-            set_width();
-            sparkle();
-        }
-    }
-    function sparkle() {
-      var c;
-      if (x!=ox || y!=oy) {
-        ox=x;
-        oy=y;
-        for (c=0; c<sparkles; c++) if (!starv[c]) {
-          star[c].style.left=(starx[c]=x)+"px";
-          star[c].style.top=(stary[c]=y)+"px";
-          star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-          star[c].style.visibility="visible";
-          starv[c]=50;
-          break;
-        }
-      }
-      for (c=0; c<sparkles; c++) {
-        if (starv[c]) update_star(c);
-        if (tinyv[c]) update_tiny(c);
-      }
-      setTimeout("sparkle()", 40);
-    }
-    function update_star(i) {
-      // 별가루가 뿌려지는 부분-> 스타일 z-index추가
-        star[i].style.zIndex="100";
-        tiny[i].style.zIndex="100";
-      if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-      if (starv[i]) {
-        stary[i]+=1+Math.random()*3;
-        if (stary[i]<shigh+sdown) {
-          star[i].style.top=stary[i]+"px";
-          starx[i]+=(i%5-2)/5;
-          star[i].style.left=starx[i]+"px";
-        }
-        else {
-          star[i].style.visibility="hidden";
-          starv[i]=0;
-          return;
-        }
-      }
-      else {
-        tinyv[i]=50;
-        tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-        tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-        tiny[i].style.width="2px";
-        tiny[i].style.height="2px";
-        star[i].style.visibility="hidden";
-        tiny[i].style.visibility="visible";
-      }
-    }
-    function update_tiny(i) {
-      if (--tinyv[i]==25) {
-        tiny[i].style.width="1px";
-        tiny[i].style.height="1px";
-      }
-      if (tinyv[i]) {
-        tinyy[i]+=1+Math.random()*3;
-        if (tinyy[i]<shigh+sdown) {
-          tiny[i].style.top=tinyy[i]+"px";
-          tinyx[i]+=(i%5-2)/5;
-          tiny[i].style.left=tinyx[i]+"px";
-        }
-        else {
-          tiny[i].style.visibility="hidden";
-          tinyv[i]=0;
-          return;
-        }
-      }
-      else tiny[i].style.visibility="hidden";
-    }
-    
-    function mouse(e) {
-      set_scroll();
-      y=(e)?e.pageY:event.y+sdown;
-      x=(e)?e.pageX:event.x+sleft;
-    }
-    function set_scroll() {
-      if (typeof(self.pageYOffset)=="number") {
-        sdown=self.pageYOffset;
-        sleft=self.pageXOffset;
-      }
-      else if (document.body.scrollTop || document.body.scrollLeft) {
-        sdown=document.body.scrollTop;
-        sleft=document.body.scrollLeft;
-      }
-      else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-        sleft=document.documentElement.scrollLeft;
-        sdown=document.documentElement.scrollTop;
-      }
-      else {
-        sdown=0;
-        sleft=0;
-      }
-    }
-    window.onresize=set_width;
-    function set_width() {
-      if (typeof(self.innerWidth)=="number") {
-        swide=self.innerWidth;
-        shigh=self.innerHeight;
-      }
-      else if (document.documentElement && document.documentElement.clientWidth) {
-        swide=document.documentElement.clientWidth;
-        shigh=document.documentElement.clientHeight;
-      }
-      else if (document.body.clientWidth) {
-        swide=document.body.clientWidth;
-        shigh=document.body.clientHeight;
-      }
-    }
-    function createDiv(height, width) {
-      var div=document.createElement("div");
-      div.style.position="absolute";
-      div.style.height=height+"px";
-      div.style.width=width+"px";
-      div.style.overflow="hidden";
-      div.style.backgroundColor=colour;
-      return (div);
-    }
-    // ]]>
-    </script>
+
 </head>
 <body  data-spy="scroll" data-target="#myScrollspy" data-offset="1" -ms-overflow-style: none;>
+  <!-- <div class="pwbox">
+    <div>
+      <div class="link-tittel textwhite">Please enter your password to check the document</div>
+      <div><input type="password" name="aboutpw" id="aboutpw"><button>입력</button></div>
+    </div>
+     -->
   </div>
     <div class="body-tag main">
     <div class="head">
@@ -200,12 +36,12 @@
                 <a href="/개인페이지/개인페이지 메인.html"><img class="" src="../개인페이지/이미지/로고.png" alt=""></a>
                 <div class="main-menu">
                   <span class="fl">
-                    <a class="main-menu-maggin" href="개인페이지 about.html">about</a>
+                    <a class="main-menu-maggin" href="../개인페이지/개인페이지 about.html">about</a>
                     <div class="main-menu-select"></div>
                   </span>
                   <span class="fl selectpage">
-                    <a href="/개인페이지/개인페이지 컴션.html">commission</a>
-                    <div class="main-menu-select selected"></div>
+                    <a href="../개인페이지/개인페이지 컴션.html">commission</a>
+                    <div class="main-menu-select  selected"></div>
                   </span>
                   <span class="fl">
                     <a href="">more</a>
@@ -233,90 +69,120 @@
         </div>
     </div>
     <div></div>
+    <div class="container-fluid">
+        <div class="row">
+          <nav class="display-none" id="myScrollspy">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#about1"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about2"></a>
+              </li>
+            </ul>
+          </nav>
           <div class="commission-body">
-            <div class="commission-body-menu display-none">
-              <!-- 완성후 display-none 제거 할것-->
-              <div class="commission-body-menubox">
-                <div>
-                  <div>
-                    <div class="">
-                      <i class="fas fa-times"></i>
-                    </div>
-                  </div>
-                  <div id="bgbox" class="commission-typeselect">
-                    <div class="commissiontitell">
-                      <div>Find the type you want</div>
-                      <div>슬라이드를 넘겨 타입을 확인하세요.</div>  
-                    </div>
-                    <div class="commission-typeselect-in">
-                      <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <a href="">asddddsdfs</a>
-                          </div>
-                          <div class="swiper-slide">
-                            <a href="">asddddsdfs</a>
-                          </div>
-                          <div class="swiper-slide">
-                            <a href="">asddddsdfs</a>
-                          </div>
-                          <div class="swiper-slide">
-                            <a href="">asddddsdfs</a>
-                          </div>
-                          <div class="swiper-slide">
-                            <a href="">asddddsdfs</a>
+            <div id="" class="">
+                <div class="commission-bodyin">
+                    <div class="commission-bodyin-l">
+                      <div class="commission-typemenu">
+                        <a class="a1" data="0" href="#" data-toggle="tooltip" data-placement="top" title="Profile type">A Type</a>
+                        <a  href="#" data="1" data-toggle="tooltip" data-placement="top" title="Illustration type">B Type</a>
+                        <a  href="#" data="2" data-toggle="tooltip" data-placement="top" title="SuperDéformer type">C Type</a>
+                        <a  href="#" data="3" data-toggle="tooltip" data-placement="top" title="Design type">D Type</a>
+                      </div>
+                      <div class="commission-bodyin-r">
+                        <div class="commission-telegraphic fl"></div>
+                        <div class="fl">
+                          <div >
+                            <div class="atype">
+                              <div>A type</div>
+                              <div>Profile</div>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Free Quality</th><th>Full Quality</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1.5</td><td>2.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2.0</td><td>3.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2.5</td><td>4.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3.0</td><td>5.5</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="atype">
+                              <div>B type</div>
+                              <div>Illustration</div>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Free Quality</th><th>Full Quality</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>2.5</td><td>4.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3.0</td><td>5.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3.5</td><td>6.5</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="atype">
+                              <div>C type</div>
+                              <div>SuperDéformer</div>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Free Quality</th><th>Full Quality</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>0.5</td><td>1.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1.5</td><td>3.5</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="atype">
+                              <div>D type</div>
+                              <div>Design</div>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>One Quality</th><th>Adding another type Discount</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>3.5</td><td><div>A type 0.5</div><div>B type 1.0</div><div>c type 0.3</div></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    
                     </div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="commission-body-menubg"></div>
-            </div>
-            <div class="commission-bodyin">
-                <div class="commission-bodyin-l">
-                  <div class="commission-typemenu">
-                    <a class="a1" href="" data-toggle="tooltip" data-placement="top" title="Profile type">A Type</a>
-                    <a href="" data-toggle="tooltip" data-placement="top" title="Illustration type">B Type</a>
-                    <a href="" data-toggle="tooltip" data-placement="top" title="SuperDéformer type">C Type</a>
-                    <a href="" data-toggle="tooltip" data-placement="top" title="Design type">D Type</a>
-                  </div>
-                  <div class="commission-bodyin-r">
-                    <div class="commission-telegraphic fl"></div>
-                    <div class="fl">
-                      <div class="atype">
-                        <div>A type</div>
-                        <div>Profile</div>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Free Quality</th><th>Full Quality</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>1.5</td><td>2.5</td>
-                            </tr>
-                            <tr>
-                              <td>2.0</td><td>3.5</td>
-                            </tr>
-                            <tr>
-                              <td>2.5</td><td>4.5</td>
-                            </tr>
-                            <tr>
-                              <td>3.0</td><td>5.5</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </div>
-                  </div>
-                </div>
-                
-            </div>
+            </div>     
         </div>
       </div>
       
