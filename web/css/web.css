@@ -188,6 +188,9 @@ a{
 		text-align: left;
 }
 
+.notice-contents{
+    display: none
+}
 .popup{
 		width: 500px;
 		height: 400px;
@@ -198,7 +201,44 @@ a{
 		background-color: white;
 		display: none;
 }
+.popup-title{
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    
+}
+.popup-contents{
+    height: 290px;
+    font-size: 20px;
+    padding: 10px;
+}
+.popup-close{
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: aliceblue;
+    font-size: 20px;
+    float: right;
+    margin-right: 10px;
+}
+.gallery-container{
+    width: 400px;
+    height: 160px;
+    padding-top: 25px;
+}
+.gallery{
+    width: 100px;
+    height: 100px;
+    float: left
+
+}
 footer{
     height: 100px;
     background-color: green;
+}
+.display-block{
+    display: block !important;
 }

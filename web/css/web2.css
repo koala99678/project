@@ -1,0 +1,44 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222328
+}
+body{
+    width: 1000px;
+}
+body::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+a{
+    text-decoration: none;
+    display: block
+}
+.header{
+    height: 650px;
+    width: 300px;
+    background-color: aqua;
+}
+.logo{
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+}
+.contants{
+    height: 550px;
+    width: 700px;
+    background-color: beige;
+}
+footer{
+    width: 700px;
+    height: 100px;
+}
+.fl{
+    float: left
+}
+.display-none{
+    display: none
+}

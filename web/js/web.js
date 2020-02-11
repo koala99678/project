@@ -52,7 +52,14 @@ $(document).ready(function(){
 						$('.tab-contents').removeClass('active').last().addClass('active');
 				}
 		})
-		$('.tab-contents').first().find('li').click(function(){
-				alert('123');
+		$('.notice-title').click(function(){
+            var title = $(this).text();
+            var contents = $(this).siblings().text();
+//            str = str+ "<div>" + contents + "</div>" 위와 같음
+            $('.popup-title').html(title);
+            $('.popup-contents').html(contents);
+            $('.popup').addClass('display-block');
 		})
+    $('.notice-close').click(function(){
+        ('.popup').removeClass('display-block')})
 })
