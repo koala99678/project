@@ -55,7 +55,6 @@ $(document).ready(function(){
 		$('.notice-title').click(function(){
             var title = $(this).text();
             var contents = $(this).siblings().text();
-//            str = str+ "<div>" + contents + "</div>" 위와 같음
             $('.popup-title').html(title);
             $('.popup-contents').html(contents);
             $('.popup').addClass('display-block');
