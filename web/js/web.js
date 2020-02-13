@@ -37,11 +37,13 @@ $(document).ready(function(){
 				$('.img-slide').first().animate({'margin-top':'300px'},function(){
 						$(this).removeAttr('style');
 						$('.img-slide').last().detach().prependTo('.img-slide-wrap');
+//                    $(지금 선택된 것의).마지막().잘라서().맨앞에 가져다 붙여라('클래스의')
 				});
 				*/
 				/*아래에서 위로*/
 				$('.img-slide').first().animate({'margin-top':'-300px'},function(){
 						$(this).detach().appendTo('.img-slide-wrap').removeAttr('style');
+//                    $(지금 선택된 것을).잘라서().안에있는 요소들 뒤에 붙여라('클래스').지금생긴것을 지워라('스타일');
 				})
 		},1000);
 		$('.tab>div').click(function(){
