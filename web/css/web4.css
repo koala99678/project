@@ -1,0 +1,40 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.slide-container{
+    height: 500px;
+    width: 800px;
+    overflow: hidden;
+}
+.slide-waiper{
+    height: 500px;
+    width: 2400px;
+}
+.slide{
+    height: 500px;
+    width: 800px;
+    float: left;
+     
+}
+table{
+    width: 600px;
+}
+.a{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.b{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
