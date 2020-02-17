@@ -1,7 +1,28 @@
 $(function(){
-   setInterval(function(){
-       $('.slide').first().animate({'margin-left':'-800px'},function(){
-           $(this).detach().appendTo('.slide-waiper').removeAttr('styel')
+   $('.menu').hover(function(){
+       $('.sub-menu').animate({
+           height: '202px'
        })
-   },1000)
+   },function(){
+       $('.sub-menu').animate({
+           height: '0px'
+       })
+       $('.main-menu>a').removeClass('hover')
+   })
+     $('.sub1>a').hover(function(){
+         var index = $(this).attr('data-target')
+         $('.main-menu>a').removeClass('hover')
+         $('.main-menu>a').eq(index).addClass('hover')
+    })
+    $('.main-menu>a').hover(function(){
+        $('.main-menu>a').removeClass('hover')
+        $(this).addClass('hover')
+    })
+    setInterval(function(){
+        $('.slid').first().animate({
+            marginLeft:'-1000px'
+        },function(){
+            $('.slid').first().detach().appendTo('.slid-wiper').removeAttr('style')    
+        })
+    },1000)
 })
