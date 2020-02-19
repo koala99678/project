@@ -1,10 +1,10 @@
 $(function(){
    $('.menu').hover(function(){
-       $('.sub-menu').animate({
+       $('.sub-menu').stop().animate({
            height: '202px'
        })
    },function(){
-       $('.sub-menu').animate({
+       $('.sub-menu').stop().animate({
            height: '0px'
        })
        $('.main-menu>a').removeClass('hover')
