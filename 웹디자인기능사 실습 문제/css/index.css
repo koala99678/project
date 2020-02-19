@@ -17,11 +17,14 @@ body,html{
     height: 200px;
     width: 100%;
 }
-.header img{
+.logo{
     height: 100px;
     width: auto;
     margin-top: 50px;
     float: left;
+}
+.mobile-menu{
+    display: none;
 }
 .menu{
     float: right;
@@ -93,8 +96,8 @@ body,html{
 }
 .img-mant{
     position: absolute;
-    top: 150px;
-    left:330px;
+    top: 130px;
+    left:calc(50% - 150px);
     font-size: 25px;
     z-index: 10
 }
