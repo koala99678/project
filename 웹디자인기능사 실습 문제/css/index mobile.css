@@ -30,6 +30,7 @@
         width: 300px;
         position: relative;
         z-index: 30;
+        display: none;
     }
     .main-menu>a{
         height: 100%;

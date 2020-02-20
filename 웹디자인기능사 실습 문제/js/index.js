@@ -26,4 +26,7 @@ $(function(){
                         $('.img-slide').last().detach().prependTo('.img-waiper')
         })
     },1000)
+    $('.mobile-menu').click(function(){
+        $('.menu').slideToggle()
+    })
 })

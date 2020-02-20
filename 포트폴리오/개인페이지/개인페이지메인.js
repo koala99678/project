@@ -12,26 +12,26 @@ $(function(){
           var maindown =  document.querySelector('.maindown')
               maindown.classList.add('animated', 'bounce','infinite')
         }
-        if($( this ).scrollTop() > 1048){
-          var maindown =  document.querySelector('.maindown')
-              maindown.classList.remove('animated', 'bounce','infinite')
-              $('#section3').removeClass('display-none')
-              $('.nav-last').removeClass('display-none')
-              var swiper = new Swiper('.swiper-container', {
-              slidesPerView: 'auto',
-              spaceBetween: 30,
-              centeredSlides: true,
-              parallax: true,
-              speed: 300,
-              mousewheel: {
-                sensitivity:5000,
-              },
-              pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-              },
-            });
-          }
+        // if($( this ).scrollTop() > 1048){
+        //   var maindown =  document.querySelector('.maindown')
+        //       maindown.classList.remove('animated', 'bounce','infinite')
+        //       $('#section3').removeClass('display-none')
+        //       $('.nav-last').removeClass('display-none')
+        //       var swiper = new Swiper('.swiper-container', {
+        //       slidesPerView: 'auto',
+        //       spaceBetween: 30,
+        //       centeredSlides: true,
+        //       parallax: true,
+        //       speed: 300,
+        //       mousewheel: {
+        //         sensitivity:5000,
+        //       },
+        //       pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //       },
+        //     });
+        //   }
       })
 
       $('.maindown').click(function(){

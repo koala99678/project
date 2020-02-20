@@ -20,4 +20,12 @@ $(document).ready(function(){
             'margin-left':margin+'px'
           })
         })
+        $( window ).scroll( function() {
+          if ( $( this ).scrollTop() > 200 ) {
+            $( '.talk' ).fadeIn();
+          } else {
+            $( '.talk' ).fadeOut();
+          }
+        } );
+  
 })

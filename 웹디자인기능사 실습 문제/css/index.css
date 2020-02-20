@@ -189,3 +189,6 @@ footer>div{
     margin-left: 15px;
     text-align: left;
 }
+.display-none{
+    display: none;
+}
