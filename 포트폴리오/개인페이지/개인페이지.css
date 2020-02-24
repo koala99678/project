@@ -529,6 +529,36 @@ opacity: 1.0;
   td{
     text-align: center;
   }
+  .commission-notice-menu>div{
+    float: left;
+  }
+  .commission-notice-tittl{
+    font-family: 'UhBeemysen';
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .commission-notice-menuslect,.commission-notice-menuslect2{
+    color: #fd7579;
+    font-size: 28px;
+  }
+  .commission-notice-sub{
+    width: 1000px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .commission-notice-sub>div{
+    width: 1000px;
+    height: 1200px;
+  }
+  .commission-notice-sub>div>div{
+    width: 1000px;
+    height: 300px;
+  }
+  .commission-notice-menu>a{
+    margin-right:15px;
+  }
 /* 반응형 메인 */
 
 @media ( max-width: 1080px ) {

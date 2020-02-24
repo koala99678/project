@@ -27,5 +27,22 @@ $(document).ready(function(){
             $( '.talk' ).fadeOut();
           }
         } );
-  
+        $('.commission-notice-menu>.commission-notice-tittl').hover(function(){
+          $('.commission-notice-menu>.commission-notice-tittl').removeClass('commission-notice-menuslect')
+          $(this).addClass('commission-notice-menuslect')
+        },function(){
+          $('.commission-notice-menu>.commission-notice-tittl').removeClass('commission-notice-menuslect')
+        })
+        $('.commission-notice-menu>.commission-notice-tittl').click(function(){
+          $('.commission-notice-menu>.commission-notice-tittl').removeClass('commission-notice-menuslect2')
+          $(this).addClass('commission-notice-menuslect2')
+          var index2 = $(this).attr('data-target')
+          var margin2 = -300 * parseInt(index2);
+          $('.commission-notice-sub>div').animate({
+            'margin-top':margin2+'px'
+          })
+          return false;
+          // return ture일때 링크로 넘어감, 링크로 넘어가지 않게 하기 위해 return false;로 막음
+        })
+        
 })
