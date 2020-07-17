@@ -44,5 +44,13 @@ $(document).ready(function(){
           return false;
           // return ture일때 링크로 넘어감, 링크로 넘어가지 않게 하기 위해 return false;로 막음
         })
-        
+        $('.popper-btn').click(function(){
+          $('.popper-folder').removeClass('display-none')
+        })
+  
+        $('.popper-btn').click( function() {
+            $( 'html, body' ).animate( { scrollTop : 2150 }, 400 );
+            return false;
+          } );
+      
 })

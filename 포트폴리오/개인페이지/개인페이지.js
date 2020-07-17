@@ -80,5 +80,10 @@ $(function(){
 
       // 현재 스크롤 위치
       // $(window).scroll(function () { var scrollValue = $(document).scrollTop(); console.log(scrollValue); });
+      $('.popper-folder-in>a').click(function () {
+        return false;
+      });
+      // $('#section3 .swiper-slide a').click(function () {
+      //   return false;
+      // });
 })
-

@@ -1,0 +1,131 @@
+@charset 'utf-8';
+/* 어비 마이센치 */
+  @font-face { font-family: 'UhBeemysen'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff');
+   font-weight: normal; font-style: normal; }
+   
+  
+   /* 어비 푸딩체 */
+  @font-face { font-family: 'UhBeepuding';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeepuding.woff') format('woff');
+   font-weight: normal; font-style: normal; }
+  
+  
+  /* 어비 나현체 */
+  @font-face { font-family: 'UhbeeNaHyun'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhbeeNaHyun.woff') format('woff');
+   font-weight: normal; font-style: normal; }
+  
+
+   /* html{cursor: url(../개인페이지/이미지/커서.png), default;} */
+   /* body, html {cursor: url(../개인페이지/이미지/커서.png), url(myBall.cur), auto;} */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'UhBeepuding';
+    /* 구역나누기용 보더 */
+    /* border: solid 1px black; */
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.bodybox{
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.tittle{
+ margin-left: 80px;
+}
+.tittle-t{
+    font-size: 32px;
+    font-family: 'UhbeeNaHyun';
+    font-weight: 500;
+    margin-top: 100px;
+}
+.tittle-b{
+    font-size: 20px;
+    font-family: 'UhbeeNaHyun';
+    font-weight: 200;
+    margin-left: 10px;
+}
+.content{
+    width: 60%;
+    height: 50vh;
+    margin: 0 auto;
+    content: '';
+    clear: both;
+    display: block;
+    margin-top: 40px;
+}
+.content-a{
+    width: 300px;
+    height: 90%;
+    position: relative;
+}
+.content-b{
+    width: 300px;
+    height: 90%;
+    position: relative;
+}
+.type{
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all ease 1s;
+}
+.type:hover{
+    transform: scale( 2.0 );
+    opacity: 0.5;
+}
+/*  */
+.sd{
+    background-image: url(../커미션/이미지/sd소스.png);
+}
+.ld{
+    background-image: url(../커미션/이미지/ld소스.png);
+}
+.content2{
+    margin-right: 150px;
+    float: right;
+}
+.content2 a{
+ 
+    text-decoration: none;
+    color: black;
+}
+.name{
+    z-index: 10;
+    opacity: 0.5;
+    position: absolute;
+    top: calc(50% - 50px);
+    text-decoration: none;
+    text-align: center;
+    width: 0px;
+    height: 100px;
+    background-color: black;
+    line-height: 100px;
+    font-size: 34px;
+    color: transparent;
+}
+
+/* 공통 css */
+.z-index{
+    z-index: 100;
+}
+.hiden{
+    overflow: hidden;
+}
+.fl-left{
+    float: left;
+}
+.fl-right{
+    float: right;
+}
